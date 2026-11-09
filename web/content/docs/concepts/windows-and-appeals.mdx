@@ -1,0 +1,32 @@
+---
+title: Review windows and appeals
+description: The owner's veto window before anything is paid, and the one paid re-read with the ladder reversed.
+---
+
+## The review window
+
+Each card has a review window of 0 to 72 hours. A claim enters it when it is filed, and nothing is sized until it ends. Inside the window the owner can **veto** the claim: once, and for any reason. A vetoed claim is closed and nothing is paid.
+
+Ratecard sizes what is described. It cannot see the work, so the window is where a team says no: to a split job, an inflated story, or work that never happened.
+
+Time comes from the transaction datetime, `gl.message.raw["datetime"]`, which is identical on every validator. A window of 0 means a claim can be sized at once and cannot be vetoed.
+
+## One appeal
+
+A contributor who thinks the size is too small can appeal once. It costs the card's appeal fee, paid exactly, and the claim is read again with **the ladder shown largest first**. The reversed prompt is the same text; only the ladder block changes, so the second reading has no pull from the order the anchors were listed in.
+
+**The second reading replaces the first.** The claim keeps both labels, `reading1` and `reading2`, and the result follows the second.
+
+| The second reading | The pay | The appeal fee |
+|---|---|---|
+| Changes the result, higher | the difference is paid from the pool | back to the contributor |
+| Changes the result, lower | takes back what it can (see below) | back to the contributor |
+| Same result | unchanged | to the pool |
+
+## A lower second reading
+
+A lower result takes the difference back from the contributor's **balance**, up to what is still there. If they already withdrew the money, only what remains can return, and they keep what was paid. This is a limit worth knowing before an appeal: an appeal can lower a result.
+
+## Fees move only as balances
+
+`appeal` only holds the fee in escrow. The second reading, run by `size`, moves balances. Nothing is sent out until `withdraw`.

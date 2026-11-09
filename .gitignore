@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.venv*/
+.pytest_cache/
+node_modules/
+.next/
+out/
+.env
+.env.*
+!.env.example
+web/tsconfig.tsbuildinfo
+web/next-env.d.ts
+web/.source/
+# Keys never live in this repository: scripts keep them in ~/.doorman/.
+accounts.json
+# Local tool settings.
+.claude/
+# Vercel CLI link data.
+.vercel/
+
+.vercel
+.env*
+pip.log

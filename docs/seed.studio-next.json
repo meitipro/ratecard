@@ -1,0 +1,114 @@
+{
+  "network": "studio-next",
+  "contract": "0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF",
+  "steps": [
+    {
+      "key": "kiln:open_card",
+      "method": "open_card",
+      "from": "0xdDA52d45B20fdA3E31D0F4513C8Bd365A6dDc916",
+      "ok": true,
+      "hash": "0x5a0873eff24aff7e939873e7f03f095d56266e6179c89d5fa6cea140da29660e",
+      "returned": 3,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:03Z",
+      "note": "the Kiln ladder, pool 340 GEN, cap XL, review window 1 hour, appeal fee 1 GEN"
+    },
+    {
+      "key": "ada:claim",
+      "method": "claim",
+      "from": "0xe7672a1e86161A5a5C40c0a434aC5cc28fa239BB",
+      "ok": true,
+      "hash": "0x0f06e616d29811706207c45231122dbe30f692fb14092929ac517f0b77f0b1c7",
+      "returned": 35,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:10Z",
+      "note": ""
+    },
+    {
+      "key": "bo:claim",
+      "method": "claim",
+      "from": "0x261cB6AEF68Daf4c44cA96Bb8E8643bc1022045d",
+      "ok": true,
+      "hash": "0xc9046b7892d65196ec6c897f4e610f8253798d671c97a33be1bb78c15753e123",
+      "returned": 36,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:18Z",
+      "note": ""
+    },
+    {
+      "key": "cy:claim",
+      "method": "claim",
+      "from": "0x0744516eD119332503DAe41FeBC3722F2290a30e",
+      "ok": true,
+      "hash": "0xd55d1fc22edc3bc1de3eb967a703094e2c711a92c564988bcfdbcd82e50d3f20",
+      "returned": 37,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:26Z",
+      "note": ""
+    },
+    {
+      "key": "dee:claim",
+      "method": "claim",
+      "from": "0xB53152932a7461a4d598678D7e5D2811D98a6ab0",
+      "ok": true,
+      "hash": "0x9531128e9c55a23e3422eb59171349fc5be4f0932779f38e28a9ff2162ddc567",
+      "returned": 38,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:33Z",
+      "note": ""
+    },
+    {
+      "key": "dee:veto",
+      "method": "veto",
+      "from": "0xdDA52d45B20fdA3E31D0F4513C8Bd365A6dDc916",
+      "ok": true,
+      "hash": "0x8e5228e957013f4d00fe7105215555d46330aced2cae15068fe61c8e00098f83",
+      "returned": 38,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:41Z",
+      "note": "the owner says no inside the review window"
+    },
+    {
+      "key": "capped:open_card",
+      "method": "open_card",
+      "from": "0x42D1B39b2b8A84Eda7aC7FDa32383299c84dFEDA",
+      "ok": true,
+      "hash": "0x1b1122fb2879532fbf6cd4b93fa785bf22a21338ebc4e4d871bae4c1e3378b50",
+      "returned": 4,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:49Z",
+      "note": "the same ladder with the cap at M, so a larger claim is paid the cap"
+    }
+  ],
+  "cards": {
+    "kiln": {
+      "id": 3,
+      "owner": "0xdDA52d45B20fdA3E31D0F4513C8Bd365A6dDc916"
+    },
+    "capped": {
+      "id": 4,
+      "owner": "0x42D1B39b2b8A84Eda7aC7FDa32383299c84dFEDA"
+    }
+  },
+  "claims": {
+    "dee": {
+      "id": 38,
+      "card_id": 3,
+      "status": "VETOED",
+      "reading1": "",
+      "reading2": "",
+      "tier": "",
+      "pay": "0",
+      "appealed": false,
+      "fee_to": "",
+      "claimant": "0xB53152932a7461a4d598678D7e5D2811D98a6ab0"
+    }
+  }
+}

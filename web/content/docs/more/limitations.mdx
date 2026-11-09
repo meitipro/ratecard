@@ -1,0 +1,28 @@
+---
+title: Limitations
+description: What Ratecard does and does not check, and where this build stops.
+---
+
+## What a size is
+
+How big a described piece of work is, compared with five examples a team wrote. Scope and effort, like the examples.
+
+## What it is not
+
+- **Not a check that work was done.** It sizes what is described and cannot see the work. The owner's veto window is the check, and the page says so.
+- **Not a quality score.** Size is scope and effort, not how good the work is. The judge is told to ignore polish.
+- **Not an hours counter.** Hours the claimant reports are ignored by rule.
+- **Not a vote.** Nobody argues the price; the card sets it.
+- **As fair as the five examples.** A rigged or muddy ladder gives rigged or muddy sizes. The anchors are public and fixed before any claim, so contributors can read them first. A claim that fits no example well is the one case where an appeal is worth its fee.
+- **Not binding on the model.** Models disagree. A validator disagreement is a failed round, never a label, and nothing defaults to a tier. See the evaluation page for what the golden claims did, including the misses.
+
+## Where the build spec contradicts itself
+
+The build spec says a claim "reserves nothing yet" and also that a veto returns "the reserved price" to the pool. This contract takes the first at its word: a claim reserves nothing, so a veto has nothing to return and the pool is untouched. What it holds apart from the pool is the escrow of appeal fees. Sizing needs the pool to hold the cap price, so a size is never given that cannot be paid.
+
+## Where this build stops
+
+- The contract is one deployed instance on Studio Next, a test network: the GEN is test GEN.
+- A pool has no method to take unspent money back out; a card is not closed by its owner. Fund what you are willing to commit.
+- A lower second reading can only take back what is still in the contributor's balance.
+- Linked claims, anchor revisions, board adapters and a calibration report are not built.

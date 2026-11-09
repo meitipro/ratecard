@@ -1,0 +1,26 @@
+---
+title: FAQ and changelog
+description: Common questions, and what changed.
+---
+
+## FAQ
+
+**Is it a vote?** No. Validators each compare the claim with the same five examples and answer one tier. A size stands only when they agree on the label.
+
+**Can the team veto a claim?** Yes, once, inside the review window, for any reason. After the window the claim is sized and paid.
+
+**What if I disagree with my size?** You can appeal once for the card's appeal fee. The claim is read again with the ladder shown largest first, and the second reading replaces the first.
+
+**Do my hours count?** No. The judge is told to ignore hours and effort the claimant says it took, and any claim about price.
+
+**Who sets the price?** The team, when the card opens. The model only chooses a tier.
+
+**Why can anyone call `size`?** So a size does not wait for the contributor to return, and it is a function of what is already on chain. The caller is recorded.
+
+**Which network?** GenLayer Studio Next, chain 61997. Test GEN is free from the site's faucet.
+
+## Changelog
+
+**v1, November 2026.** The first deployment on Studio Next: ten methods, the judge prompt from the build spec word for word, label-only agreement, prices looked up on the card, top-level payouts only. The deployed address and source hash are on the [addresses page](/docs/reference/addresses).
+
+The runtime header is `py-genlayer:babwp9t3…`, the runner Studio Next accepted on the day this was deployed. The `5jycge4q…` header that earlier projects used was rejected by the live network that day (`invalid_contract runner malformed`), so it was replaced before the first deploy.

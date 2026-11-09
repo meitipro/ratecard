@@ -1,0 +1,135 @@
+---
+title: 'Quickstart: open a card'
+description: Open a card, fund its pool and size the first claim, in about ten minutes.
+---
+
+<Callout type="warn">Anchors and prices cannot change once a card opens. Read your ladder aloud first.</Callout>
+
+## 1. Open a card
+
+<Tabs items={['On the site', 'From code']}>
+  <Tab value="On the site">
+    <Steps>
+      <Step>
+        Open [Open a card](/new) and connect a wallet. The site walks you through **Connect wallet**, **Switch network** (it adds chain 61997 if your wallet lacks it) and **Get test GEN**.
+      </Step>
+      <Step>
+        Write the five example jobs, XS to XL, each a short plain description of real past work, and a price in GEN for each. Prices must not fall as the tier rises.
+      </Step>
+      <Step>
+        Choose the cap tier, the review window (0 to 72 hours) and the appeal fee, and the first funding for the pool. The panel on the right shows how many top-tier claims the pool covers and which two anchors sit closest together. Those counts come from your browser; the validators do the sizing.
+      </Step>
+      <Step>
+        Press **Open the card**. The card page is the link you share.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab value="From code">
+    The call is `open_card(name, anchors, prices, cap_tier, window_h, appeal_fee)`, with the first funding as the value sent. The anchors and prices are JSON text, prices in wei. This script is the one that runs: with `--dry` it prints the call and the fee deposit the SDK estimates, and sends nothing.
+
+{/* include: examples/open-card.mjs */}
+```js title="examples/open-card.mjs"
+/**
+ * Open a card from a script, signing with a local test account.
+ *
+ *   node examples/open-card.mjs <account name> <ladder.json> [--dry]
+ *
+ * ladder.json holds { "name", "anchors": [five strings], "prices_gen": [five numbers as text], "cap", "window_h", "appeal_fee_gen", "first_funding_gen" },
+ * the shape of eval/kiln.json. With --dry nothing is sent: it prints the call and the fee deposit the SDK estimates for it.
+ * The site's own signing code (lib/genlayer-core.mjs) does the work, through a stand-in EIP-1193 wallet.
+ */
+import fs from 'node:fs';
+
+import { parseEther } from 'viem';
+
+import { CONTRACT, feesFor, outcomeOf, submit, waitDecided, walletClient } from '../lib/genlayer-core.mjs';
+import { ensureAccount, standinWallet } from '../scripts/standin-wallet.mjs';
+
+const [name, file, ...flags] = process.argv.slice(2);
+if (!name || !file) {
+  console.error('usage: node examples/open-card.mjs <account name> <ladder.json> [--dry]');
+  process.exit(2);
+}
+const card = JSON.parse(fs.readFileSync(file, 'utf8'));
+ensureAccount(name);
+const { address, provider } = standinWallet(name);
+const client = walletClient(address, provider);
+const prices = card.prices_gen.map((p) => parseEther(p).toString());
+const args = [card.name, JSON.stringify(card.anchors), JSON.stringify(prices), card.cap, card.window_h, parseEther(card.appeal_fee_gen)];
+const value = parseEther(card.first_funding_gen);
+
+if (flags.includes('--dry')) {
+  const fees = await feesFor(client, 'open_card', address);
+  console.log(JSON.stringify({ contract: CONTRACT, method: 'open_card', from: address, anchors: card.anchors.length, cap: card.cap, window_h: card.window_h, pool_gen: card.first_funding_gen, feeValue: String(fees.feeValue) }));
+  await new Promise((r) => setTimeout(r, 200));
+  process.exit(0);
+}
+const hash = await submit(client, { method: 'open_card', args, value, sender: address });
+const outcome = outcomeOf(await waitDecided(client, hash, 'open_card'));
+console.log(JSON.stringify({ hash, ok: outcome.ok, card_id: outcome.returned ?? null, refusal: outcome.refusal || null }));
+process.exit(outcome.ok ? 0 : 1);
+```
+{/* end include */}
+  </Tab>
+</Tabs>
+
+## 2. Make a claim
+
+Any wallet can file a claim. See [Make a claim](/docs/make-a-claim).
+
+## 3. Size it
+
+After the review window, anyone can start the sizing with `size(claim_id)`. It needs the pool to hold the cap price. The claim page has a **Size this claim** button, and the result is read with `get_claim`:
+
+{/* include: examples/read-claim.mjs */}
+```js title="examples/read-claim.mjs"
+/**
+ * Read a claim, no wallet and nothing signed.
+ *
+ *   node examples/read-claim.mjs <claim id>
+ *
+ * get_claim answers JSON text: the work, both readings, the tier paid, the pay in wei, and the claimant's balance.
+ */
+import { CONTRACT, readClient, retried } from '../lib/genlayer-core.mjs';
+
+const [id] = process.argv.slice(2);
+if (!id) {
+  console.error('usage: node examples/read-claim.mjs <claim id>');
+  process.exit(2);
+}
+const client = readClient();
+const raw = await retried(() => client.readContract({ address: CONTRACT, functionName: 'get_claim', args: [Number(id)] }));
+const claim = JSON.parse(String(raw));
+console.log(JSON.stringify({ found: claim.found, status: claim.status, reading1: claim.reading1, reading2: claim.reading2, tier: claim.tier, pay: claim.pay, appealed: claim.appealed }));
+```
+{/* end include */}
+
+The same read from Python:
+
+{/* include: examples/read_claim.py */}
+```python title="examples/read_claim.py"
+"""
+Read a claim from Python with genlayer-py 0.19.0rc2.
+
+    python web/examples/read_claim.py <claim id>
+
+Reads need an account even for views, so a throwaway one is made and never funded.
+"""
+import json
+import sys
+
+from genlayer_py import create_account, create_client
+from genlayer_py.chains import studio_devnet
+
+CONTRACT = json.load(open("web/lib/deployment.json"))["ratecard"]
+studio_devnet.rpc_urls = {"default": {"http": ["https://studio-next.genlayer.com/api"]}}
+
+client = create_client(chain=studio_devnet, account=create_account())
+claim = json.loads(client.read_contract(address=CONTRACT, function_name="get_claim", args=[int(sys.argv[1])]))
+print(json.dumps({k: claim[k] for k in ("found", "status", "reading1", "reading2", "tier", "pay", "appealed")}))
+```
+{/* end include */}
+
+## 4. Appeal and withdraw
+
+A contributor can appeal once with **Appeal this size**, and takes the price out with **Withdraw** on [My claims](/me).

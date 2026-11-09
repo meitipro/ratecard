@@ -1,0 +1,34 @@
+---
+title: The four results
+description: SIZED, CAPPED, UNSIZED and REVISED, and what each one does. Plus VETOED.
+---
+
+The result is computed in code from one label: `XS`, `S`, `M`, `L`, `XL` or `NONE`. What a claim earns is the price on the card, never a number the model chose.
+
+| Result | Meaning | Money |
+|---|---|---|
+| **SIZED · tier** | the claim sits at one of the five tiers | the price of that tier |
+| **CAPPED · tier** | the claim is above the card's cap tier | the price of the cap tier |
+| **UNSIZED** | the text is not a description of work, or cannot be compared | nothing, the claim is closed |
+| **REVISED** | an appeal changed the result | the new price; the appeal fee comes back |
+| **VETOED** | the owner said no inside the review window | nothing |
+
+## Lifecycle of one claim
+
+```text
+claim ──► OPEN ──window──► size ──► SIZED / CAPPED / UNSIZED ──appeal──► APPEALED ──size──► REVISED or unchanged
+            │
+            └──veto (owner, inside the window)──► VETOED
+```
+
+`OPEN` waits for the review window, then for a size. `APPEALED` waits for the second reading.
+
+## Who can call what
+
+- `claim` is the contributor's. `veto` is the card owner's, inside the window. `appeal` is the claimant's.
+- `size` is **open to anyone, on purpose**: a size should not wait for the contributor to come back, and it is a function of what is already on chain. Whoever calls it is recorded as `sized_by`.
+- `fund_card` is open to anyone, on purpose: a pool is anyone's to add to. The funder is recorded.
+
+## Tiers that do not change
+
+A claim whose first reading was SIZED M and whose second reading is also M keeps its result. A claim that moves from SIZED to CAPPED at the same paid tier **has** been read differently, and counts as a change.

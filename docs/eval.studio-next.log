@@ -1,0 +1,36 @@
+  0x4Be0bE52 0.00 -> 1000.00 GEN
+  0xE863C7d6 0.00 -> 1000.00 GEN
+  open_card 0x5a50a1f71cef8b560c61d860675356b8f643e8cbb4423ee53aea3a762b813ac7
+  card 2  https://explorer-studio-dev.genlayer.com/tx/0x5a50a1f71cef8b560c61d860675356b8f643e8cbb4423ee53aea3a762b813ac7
+  claim 0xf77a147d82ecbb62b9d0d72ad40482cb79d5a503aacf583ea8a408cc48b654d6
+  size 0x9989986571b5c41c8bbac374a137ce5f95706b8154983997bc5f4385038eccdc
+  1 run 1: MATCH got XS, expected XS  (SIZED)
+  claim 0x43cc2759464df76eba1d309f4305ca378d5e35e763ec23848e3a9e2516aa6823
+  size 0x63fe7ce19956152c2c848b61fec3ff99e51b2d00fc7b550ffb8b0e8f98c769e1
+  2 run 1: MATCH got XS, expected XS  (SIZED)
+  claim 0x617f6794b6a97beecb40b3289056cf430b811e107663592e1fdca7a4962c4912
+  size 0x21531f1b20a6e1ec5293946550b46a2c74efd48dc636245b8c08f535a2e553ff
+  3 run 1: MATCH got S, expected S  (SIZED)
+  claim 0x9455a396518d9e24ac4a1b5da8d094fec1dbf5d4bfd28df87da8061c988fed7a
+  size 0x64c11190824b1cbde201fbc521dc715f3495222ce7be3c6a60bba9f5d0375208
+  4 run 1: MATCH got S, expected S  (SIZED)
+  claim 0x552b2b2f51e9f76e981215a911bf87082665ea1ba687119fa7698dfb09305d6b
+  size 0x982986d93dbcc65227d186608963f1adadbd83b91a84351f5939b1902a330f01
+  5 run 1: MATCH got S, expected S  (SIZED)
+  claim 0xfb604b65a4759b66383564aec7382d03ad93f60310aa20a765170a07da9df5d1
+  size 0x8fb5a0ab50ecb86d4b80d1e3d7a3b7ce9805cad37e9fec1776b76081b4527fd3
+  6 run 1: MATCH got M, expected M  (SIZED)
+  claim 0xa68c7677c423e67932b85a22806afdc9de0ae254d8b342a7feac07b955a70824
+  size 0x2aef74f73b3fd3545d85c73e769a8fa8a5b404fb27df5e3a6ff302a44e4c397e
+  7 run 1: MATCH got L, expected L  (SIZED)
+  claim 0xbab4fbb772dfbd30712e6d9d4a6224117dce6bdf70825ef8b696da595925e674
+  size 0x26eb13f56a3a6d688b0b665396963336f0779d87a9c5ddedaf493239a654dbd5
+  8 run 1: MATCH got XL, expected XL  (SIZED)
+  claim 0x53f3ff7b1f806e179a16b2aa4fc10e7aff31832d1416c7f6f9da4d66335adafc
+  size 0x40852540f9556be5eb0384d376febd734af43c3e4e57f6a1fe66dd606bfcd979
+  9 run 1: MATCH got NONE, expected NONE  (UNSIZED)
+  claim 0xfe1c7f5e10766eb286773d5153c0d55838cd72e1d1ff0c64913adf8326934c3c
+  size 0x4140feb8256d0fbb5835e1a8c01c7e932c4187f6678b85c2fe3760e46f78d675
+ 10 run 1: MATCH got XS, expected XS  (SIZED)
+
+wrote eval/results.md: first reading 10/10, stable 0, unstable 0

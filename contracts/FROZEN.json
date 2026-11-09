@@ -1,0 +1,16 @@
+{
+  "deployments": {
+    "studio-next": {
+      "chain_id": 61997,
+      "deployed_at": "2026-11-09T13:04:00Z",
+      "explorer": "https://explorer-studio-dev.genlayer.com",
+      "ratecard": "0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF",
+      "ratecard_deployer": "0x1b0Be67b15c1C501eb4A2a0f6F1845e2CCfDE477",
+      "ratecard_file": "contracts/ratecard.py",
+      "ratecard_sha256": "c6498250f6088541a5e5c592cbd85eecb376550fb01fa33c4888b4af254abdd6",
+      "ratecard_tx": "0xedeb38f0f7d0858f2dd36d16d8a56b44b3df3272d415e606b2661b291be4a407",
+      "rpc": "https://studio-next.genlayer.com/api",
+      "runtime": "py-genlayer:babwp9t37jw9g4j2bccgn14g6x7x9s1f7dsmh7emvz735pz4zxa0"
+    }
+  }
+}

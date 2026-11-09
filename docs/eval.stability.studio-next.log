@@ -1,0 +1,64 @@
+  claim 0x17bc706820d7bcf596968820c5ade5feff651bcb4898a53bd9b8f3bcb2c82274
+  size 0x6ad5220a95743e2333bf181a55401d94e723c42cabaf61e1c776b5958db4c127
+  1 run 2: MATCH got XS, expected XS  (SIZED)
+  claim 0x3fb10d730227c761b7b48e999eec56774adba36c4a240bc7096f97ab337b27e5
+  size 0xbc4cf697c56ccc7279adfb4fcc8c6823fadddfbb231ad029e50e34b052f68a86
+  1 run 3: MATCH got XS, expected XS  (SIZED)
+  claim 0xcff5a966f36c044da35530c69c2ccddc4d80dce36158bb454900597584b91166
+  size 0x610ca9fd564a11c9c29bb8bf0aae0d91d7defaf35e9dc5b10b2b95bcd477d997
+  2 run 2: MATCH got XS, expected XS  (SIZED)
+  claim 0x5869ad1c5a1b713c408d911a91241c688b6f9a888e455dfee471f0c17ec147bf
+  size 0x6ca3822b3a51e5d4e9c4286fb5941ea76c81fbea22b9e9cfd990ae37ddb71ac7
+  2 run 3: MATCH got XS, expected XS  (SIZED)
+  claim 0x2cec16a8726f4242ed2c07e4d78ce49f9322e641c04887f94954d346d6c60ec5
+  size 0x7ed36065df516c3abddaa0eb8ea046c9ee13561270aebb0c4b29376c7cdf37ca
+  3 run 2: MATCH got S, expected S  (SIZED)
+  claim 0x132999e7f42784b1e0219ea533ebaa425e4ad7182206c729aacb4b34ba07a87e
+  size 0x5d83eb9058806125c3544831fdef79e81b7dcae95e6398ee26ca6b63855c6c89
+  3 run 3: MATCH got S, expected S  (SIZED)
+  claim 0x8f1e19669a1ae7e6b96c5d2f4246e4425c5caf30475ceac738a44cdfd4b30093
+  size 0xfb58ecd061451393cc86967bb3d80afa4c9e29948f203ae35482272d19ff0f2d
+  4 run 2: MATCH got S, expected S  (SIZED)
+  claim 0x097f832374d9d65d4d7648c172a95e42fb85035c899f54a32e026a459611d582
+  size 0x40af342fd159b95d1f93ddc77b9b3b1325a4473ae4d92ee105aeef60f61154e4
+  4 run 3: MATCH got S, expected S  (SIZED)
+  claim 0x6e3237fa7291d7b9380d7c566d3e572cd0409904be44a8741656764176a82340
+  size 0x85f82214ff2f560d9311c6accf509dd1d2ce1b81fb7e058852877cc08963327d
+  5 run 2: MATCH got S, expected S  (SIZED)
+  claim 0x2da522b73ced55adc4befe72b867b05cc5581aa5d224a5ad86729096622dbaa9
+  size 0xa256d41e20e1c8aca45478d1ec520447879b51d3b7679bfacc2f47b7d9e4e210
+  5 run 3: MATCH got S, expected S  (SIZED)
+  claim 0xc8b96e7656fa532dd35c93eca788bfe781a23920943fc3de04d2e3049b43ca4b
+  size 0x73a277e0cc9c6d1230c5031d1df27a753148823479c66980d462c797ef7676e3
+  6 run 2: MATCH got M, expected M  (SIZED)
+  claim 0x16c33401cafbb27d0083996363e6f92533a4e9182ea4852aea879e1b2c0b5fb1
+  size 0x8c4c961e56be31724a416bc8f1a31abf10200e400c02a34d17050df1388c36b4
+  6 run 3: MATCH got M, expected M  (SIZED)
+  claim 0xc9b258ba70189d4d18f47bdbecafbcb4b1dab40aa8edf59bb2f45429dc5b0f9b
+  size 0x45b28f3f11ed3a220670affd140ca5f80ac24fcc46948703ddbe904b579a1c38
+  7 run 2: MATCH got L, expected L  (SIZED)
+  claim 0x1e6a7edfd3c3245c92fd93220162a62fe7c6a2f5803f2abbf182f960479fd6e9
+  size 0x1e4dc0cc16bf4fadf84ddd044f53f6e7df78efdbe85a2d5479f6085f3117687d
+  7 run 3: MATCH got L, expected L  (SIZED)
+  claim 0x8689f6e9324dc9545f0384ee146933a3e244ca2aba7dd3ec66ed95e8a3897a7c
+  size 0xead78b576ce1214313198a48bebd973a158a51ca52f10154ceaca751289172f1
+  8 run 2: MATCH got XL, expected XL  (SIZED)
+  claim 0xf9ecd6be572723949ae2854f0fe58f4d8c14b8f36d3fc0521e4e0f1c982d05dd
+  size 0x5990aeefc3ecc333d96b0da26823b873171a4b16c6a5dc00111db4e3bf15de36
+  8 run 3: MATCH got XL, expected XL  (SIZED)
+  claim 0xc543cc0fd8ef83a8ab25bc0cf25880231c12f2839099c33e456c7e6bbae3a273
+  size 0x5a2e3d129781d085edc2dedb04b1f154d1cdfc0261bb3490d277a65ba326b57c
+  9 run 2: MATCH got NONE, expected NONE  (UNSIZED)
+  claim 0x9e8d14b745a41363fac1610dd9382b22f2dad1e0b1e3381e5c8daec9afa07e6e
+  size 0xb25ae95bf04b7763a8057da21e7f8725112ac0f230d3f15c47837f13b09495b3
+  9 run 3: MATCH got NONE, expected NONE  (UNSIZED)
+  claim 0xdd39e656c34e735998a4fae9632b0f0dcdc26e8f3155ef038af9c805e1e2c2d8
+  size 0x05acdd8afe5cd60e5f17b169226e58d6df15a0497cee1f562062c280379e21d9
+ 10 run 2: MATCH got XS, expected XS  (SIZED)
+  claim 0x174017ec7ff2cd25b97828da3b3813fb962c85bde9b83f9a3699a939f66e6c80
+  size 0x61a0adaad3c22db266e204a76f28772610f9518b923db6c235b74ad26514edfc
+ 10 run 3: MATCH got XS, expected XS  (SIZED)
+
+wrote eval/results.md: first reading 10/10, stable 10, unstable 0
+
+no golden claim changed its label between readings

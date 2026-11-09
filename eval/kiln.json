@@ -1,0 +1,15 @@
+{
+  "name": "Kiln contributors",
+  "anchors": [
+    "Answer five questions in #help",
+    "Write a 300 word how-to",
+    "Run a weekly community call with notes",
+    "Build and ship a small tool the team uses",
+    "Organise a two day hackathon with 40 people"
+  ],
+  "prices_gen": ["2", "5", "12", "30", "80"],
+  "cap": "XL",
+  "window_h": 24,
+  "appeal_fee_gen": "1",
+  "first_funding_gen": "340"
+}

@@ -1,0 +1,30 @@
+---
+title: Writing good anchors
+description: The five example jobs are the product. How to write a ladder that sizes the same way every time.
+---
+
+The ladder is five short descriptions of real past work, one per tier, smallest to largest. Every claim is compared with them, so a card is exactly as fair as its anchors.
+
+| Rule | Limit |
+|---|---|
+| Anchors | exactly five, XS to XL |
+| One anchor | one line, at most 200 characters |
+| Prices | one per tier, in wei, and they do not fall as the tier rises |
+
+## What makes an anchor good
+
+- **Real work, plainly named.** "Run a weekly community call with notes" is better than "community work". A claim is compared by scope and effort, so the anchor should name both.
+- **Evenly spaced.** If S and M describe nearly the same job, a claim between them will flip between tiers. The card form shows which two anchors sit closest together.
+- **Different in kind of effort, not in polish.** The judge is told that size is scope and effort, not quality or how well it is written.
+
+## What the judge does with them
+
+The prompt carries the five anchors in order and one claim fenced as data, and asks for the tier whose example the claim is closest to. **Between two tiers it picks the smaller.** That is a deliberate tie break, so a pool is never overspent by a generous reading. If a claim is larger than the XL example, the answer is XL.
+
+## Fixed once the card opens
+
+Anchors and prices cannot change after `open_card`. A new ladder is a new card. This is on purpose: a rigged ladder is visible to every contributor before any claim, and nobody can reprice a claim after the fact.
+
+## Anchors are public
+
+They are shown on the card page and read by the validators as data: every `<` and `>` in an anchor is replaced at the prompt boundary, so an anchor cannot close its own block and open a forged one.

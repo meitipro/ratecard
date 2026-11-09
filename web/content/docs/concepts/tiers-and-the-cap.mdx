@@ -1,0 +1,30 @@
+---
+title: Tiers, prices and the cap
+description: Where the price comes from, and what the cap protects.
+---
+
+The model returns a **tier**. The **price** is looked up on the card from that tier, in contract code. The model never sees a price and never names one: a price in the model's answer is ignored, and a test checks that.
+
+## The five tiers
+
+`XS`, `S`, `M`, `L`, `XL`, each with the price the team wrote. Prices are whole numbers of wei and may stay equal but never fall as the tier rises.
+
+## The cap
+
+The owner sets a cap tier when the card opens. A claim the judge places **above** the cap pays the cap tier's price and is marked **CAPPED**. The cap keeps any single claim from costing more than the card says.
+
+| Judge says | Cap is M | Pays | Marked |
+|---|---|---|---|
+| S | M | S's price | SIZED |
+| M | M | M's price | SIZED |
+| XL | M | M's price | CAPPED |
+
+## The pool
+
+The pool is what the contract can still pay. It grows when anyone funds the card, and shrinks when a claim is sized. **Sizing needs the pool to hold the cap price**, whatever tier the claim lands on, so a size is never given that cannot be paid at the top of the card. If the pool is short, claims wait until someone funds it.
+
+Money moves only in `withdraw`. `claim`, `size`, `veto` and `appeal` only move balances inside the contract.
+
+## Escrow
+
+An appeal fee is held apart from the pool, as **escrow**, until the second reading. It then goes to the contributor if the result changed, or to the pool if it did not.

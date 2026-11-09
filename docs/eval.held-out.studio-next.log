@@ -1,0 +1,11 @@
+  claim 0x24c01c4932778e7712cdd9ca171308466a4d4d01768b7a930426f594a45a5308
+  size 0xf8e8041605ae51da56925d500c1d008e5670222e75932cd7d0a692ff7118316f
+ H1 run 1: held out got M, expected EITHER  (SIZED)
+  claim 0x65543ca7193e11d8716c64f8c459989b2d1baf6088b1e22b16bfa5030b326b6e
+  size 0x69ce304ace84db50a1d392fd5c855575227bfa15165a2712cf79267d45928375
+ H2 run 1: held out got S, expected EITHER  (SIZED)
+  claim 0x462cdf766cece2c20730cc82a81a161fcdf88a2095a81a228ab1d47c059211ed
+  size 0x1b778fa9eb622e805d2cfd5da481e14389a408e93cc35b3262fc3647d325234d
+ H3 run 1: held out got L, expected EITHER  (SIZED)
+
+wrote eval/results.md: first reading 10/10, stable 0, unstable 0

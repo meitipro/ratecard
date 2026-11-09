@@ -1,0 +1,15 @@
+{
+  "title": "Ratecard docs",
+  "pages": [
+    "---Getting started---",
+    "index",
+    "quickstart",
+    "make-a-claim",
+    "---Concepts---",
+    "...concepts",
+    "---Reference---",
+    "...reference",
+    "---More---",
+    "...more"
+  ]
+}

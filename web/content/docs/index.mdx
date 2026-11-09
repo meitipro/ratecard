@@ -1,0 +1,26 @@
+---
+title: Introduction
+description: Ratecard is a rate card for contributor pay, sized by GenLayer validators.
+---
+
+<Callout>Ratecard sizes what is described. It cannot see the work, so the owner's review window is where a team says no.</Callout>
+
+Every DAO that pays contributors ends up in the same thread: a list of what people did, and a debate about what each thing is worth. The work is varied, there is no fixed price for any of it, and the contributors who negotiate best are not the ones who did the most. **Ratecard prices the work before anyone argues about it.**
+
+## What it does
+
+1. A team opens a **card**: five example jobs from XS to XL with a price for each, a cap tier, a review window of 0 to 72 hours and an appeal fee, and funds a **pool**.
+2. A contributor describes work they did, in at most 600 characters. That is a **claim**.
+3. The owner has the **review window** to veto a claim, once and for any reason.
+4. After the window, GenLayer **validators** place the claim on the ladder by comparing it with the examples. They answer one label: `XS`, `S`, `M`, `L`, `XL` or `NONE`.
+5. The contract looks the **price up on the card** and applies the cap. The model never sets a number. `withdraw` pays it.
+
+## What is on chain
+
+Everything: the ladder, every claim, both readings, the tier and the pay. A rigged ladder is visible to every contributor, because the anchors are public and fixed before any claim.
+
+## Where to go next
+
+- **Run a team?** [Open a card](/docs/quickstart).
+- **Contributing?** [Make a claim](/docs/make-a-claim).
+- **Reviewing it?** Read [the judge prompt, word for word](/docs/more/judge-prompt), the [evaluation results with transactions](/docs/more/evaluation), and the [limitations](/docs/more/limitations).
