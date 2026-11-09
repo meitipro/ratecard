@@ -1,0 +1,21 @@
+accounts: {"owner":"0x4497D5B8Cdd9c1f256aB0A2A21e0c10866A3Ea66","claimant":"0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357","other":"0x4E046cd68E04C6db5452AC714ce89F0a77D7C534"} nonces at start {"owner":0,"claimant":0,"other":0}
+faucet-owner: HTTP 200 0 GEN -> 20 GEN 
+faucet-claimant: HTTP 200 0 GEN -> 20 GEN 
+faucet-other: HTTP 200 0 GEN -> 20 GEN 
+open-card: open_card ok in 7 s  0xf71d93029d38331470befd1750943bd1252bd9f563c3abcf04394ddef4b9cb25
+claim: claim ok in 7 s  0x7f0f4031d4766dd7325b97c32ca79f1f94686b85f77f6802c6237d6f3d3502f8
+size: size ok in 22 s  0x770d6132a9c7cad3645e478ea12a405eedaa3e6e4049b23abeabdcfc237c18ce
+  -> SIZED M pays 0.12 GEN
+appeal: appeal ok in 12 s  0x1b83868f309b907cadc7c32d85f674fee3233d536e3fcaf0a9333016dd41eeb7
+size2: size ok in 40 s  0x621ad47c64472acb1013abda9a9d625ebde0040f5aaf7a72831e3e6affebd77a
+  -> after the appeal: SIZED M / M, appeal fee to pool
+claim-vague: claim ok in 7 s  0xaa61aed99afb5d9ed875315f92f63253c54fd36fbf9ffda5c8e9469b0234756b
+size-vague: size ok in 12 s  0xe69e14e73fb3bf385b504c808ca0c4066c016a3f5dd5a2eb8014509cb659154c
+  -> UNSIZED NONE, pays 0 GEN
+claimant-withdraw: withdraw ok in 7 s  0x1cb9307b5a4f5411a0290b067382b85f15fac5d523ed1ad75993ce6773070210
+  claimant: 19.889764059749957 GEN -> 20.109559078999986 GEN; owed 0.12 GEN, fee 0.000151305250002823 GEN; difference 99946324500031059 wei
+page-card: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/k/5
+page-claim: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/c/40
+page-vague: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/c/41
+
+recorded in docs/reviewer-path.studio-next.json (run live1)

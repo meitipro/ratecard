@@ -1,0 +1,14 @@
+{
+  "Contract": "https://explorer-studio-dev.genlayer.com/address/0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF",
+  "Deploy tx": "https://explorer-studio-dev.genlayer.com/tx/0xedeb38f0f7d0858f2dd36d16d8a56b44b3df3272d415e606b2661b291be4a407",
+  "Live run: open_card": "https://explorer-studio-dev.genlayer.com/tx/0xf71d93029d38331470befd1750943bd1252bd9f563c3abcf04394ddef4b9cb25",
+  "Live run: claim (the spec's example)": "https://explorer-studio-dev.genlayer.com/tx/0x7f0f4031d4766dd7325b97c32ca79f1f94686b85f77f6802c6237d6f3d3502f8",
+  "Live run: size, SIZED M": "https://explorer-studio-dev.genlayer.com/tx/0x770d6132a9c7cad3645e478ea12a405eedaa3e6e4049b23abeabdcfc237c18ce",
+  "Live run: appeal": "https://explorer-studio-dev.genlayer.com/tx/0x1b83868f309b907cadc7c32d85f674fee3233d536e3fcaf0a9333016dd41eeb7",
+  "Live run: second reading, ladder reversed": "https://explorer-studio-dev.genlayer.com/tx/0x621ad47c64472acb1013abda9a9d625ebde0040f5aaf7a72831e3e6affebd77a",
+  "Live run: size, UNSIZED": "https://explorer-studio-dev.genlayer.com/tx/0xe69e14e73fb3bf385b504c808ca0c4066c016a3f5dd5a2eb8014509cb659154c",
+  "Live run: withdraw": "https://explorer-studio-dev.genlayer.com/tx/0x1cb9307b5a4f5411a0290b067382b85f15fac5d523ed1ad75993ce6773070210",
+  "Golden case 6 (spec example), run 1": "https://explorer-studio-dev.genlayer.com/tx/0x8fb5a0ab50ecb86d4b80d1e3d7a3b7ce9805cad37e9fec1776b76081b4527fd3",
+  "Golden results": "https://github.com/meitipro/ratecard/blob/main/eval/results.md",
+  "Mutation table": "https://github.com/meitipro/ratecard/blob/main/docs/MUTATIONS.md"
+}

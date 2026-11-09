@@ -85,6 +85,30 @@
       "detail": "",
       "at": "2026-11-09T13:39:49Z",
       "note": "the same ladder with the cap at M, so a larger claim is paid the cap"
+    },
+    {
+      "key": "ed:claim",
+      "method": "claim",
+      "from": "0x67327225619518Dd3912Dc01e8B0B445F3ceE557",
+      "ok": true,
+      "hash": "0x0468db4466725a6856e10dc0adab6f57ff0bf1c491bdf55481f2c07782c0e01f",
+      "returned": 39,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:39:57Z",
+      "note": ""
+    },
+    {
+      "key": "ed:size",
+      "method": "size",
+      "from": "0x67327225619518Dd3912Dc01e8B0B445F3ceE557",
+      "ok": true,
+      "hash": "0x0efced48c0967fa9ff200a3d7aad7b9cad4d7866cc98d216765efdfb7f97caec",
+      "returned": 39,
+      "refusal": "",
+      "detail": "",
+      "at": "2026-11-09T13:40:15Z",
+      "note": ""
     }
   ],
   "cards": {
@@ -109,6 +133,18 @@
       "appealed": false,
       "fee_to": "",
       "claimant": "0xB53152932a7461a4d598678D7e5D2811D98a6ab0"
+    },
+    "ed": {
+      "id": 39,
+      "card_id": 4,
+      "status": "CAPPED",
+      "reading1": "XL",
+      "reading2": "",
+      "tier": "M",
+      "pay": "12000000000000000000",
+      "appealed": false,
+      "fee_to": "",
+      "claimant": "0x67327225619518Dd3912Dc01e8B0B445F3ceE557"
     }
   }
 }

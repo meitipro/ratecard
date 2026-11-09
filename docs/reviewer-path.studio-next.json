@@ -1,0 +1,268 @@
+{
+  "runs": {
+    "live1": {
+      "site": "https://ratecard-genlayer.vercel.app",
+      "contract": "0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF",
+      "started": "2026-11-09T13:42:14.615Z",
+      "steps": [
+        {
+          "at": "2026-11-09T13:42:19.573Z",
+          "key": "faucet-owner",
+          "ok": true,
+          "http": 200,
+          "sent_address": "0x4497d5b8cdd9c1f256ab0a2a21e0c10866a3ea66",
+          "answered_address": "0x4497D5B8Cdd9c1f256aB0A2A21e0c10866A3Ea66",
+          "before": "0",
+          "after": "20000000000000000000",
+          "read_after": "20000000000000000000"
+        },
+        {
+          "at": "2026-11-09T13:42:21.732Z",
+          "key": "faucet-claimant",
+          "ok": true,
+          "http": 200,
+          "sent_address": "0xaa615de4bdf52a9e13ad1ba01ace24468598a357",
+          "answered_address": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+          "before": "0",
+          "after": "20000000000000000000",
+          "read_after": "20000000000000000000"
+        },
+        {
+          "at": "2026-11-09T13:42:23.931Z",
+          "key": "faucet-other",
+          "ok": true,
+          "http": 200,
+          "sent_address": "0x4e046cd68e04c6db5452ac714ce89f0a77d7c534",
+          "answered_address": "0x4E046cd68E04C6db5452AC714ce89F0a77D7C534",
+          "before": "0",
+          "after": "20000000000000000000",
+          "read_after": "20000000000000000000"
+        },
+        {
+          "at": "2026-11-09T13:42:30.943Z",
+          "key": "open-card",
+          "method": "open_card",
+          "account": "review_owner_live1",
+          "from": "0x4497D5B8Cdd9c1f256aB0A2A21e0c10866A3Ea66",
+          "args": [
+            "Reviewer path live1: Kiln",
+            "[\"Answer five questions in #help\",\"Write a 300 word how-t...",
+            "[\"20000000000000000\",\"50000000000000000\",\"120000000000000...",
+            "XL",
+            0,
+            "10000000000000000"
+          ],
+          "value": "5000000000000000000",
+          "hash": "0xf71d93029d38331470befd1750943bd1252bd9f563c3abcf04394ddef4b9cb25",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 5,
+          "refusal": null,
+          "seconds_to_decision": 7
+        },
+        {
+          "at": "2026-11-09T13:42:38.441Z",
+          "key": "claim",
+          "method": "claim",
+          "account": "review_claimant_live1",
+          "from": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+          "args": [
+            5,
+            "Hosted four weekly calls with written notes"
+          ],
+          "value": "0",
+          "hash": "0x7f0f4031d4766dd7325b97c32ca79f1f94686b85f77f6802c6237d6f3d3502f8",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 40,
+          "refusal": null,
+          "seconds_to_decision": 7
+        },
+        {
+          "at": "2026-11-09T13:43:00.251Z",
+          "key": "size",
+          "method": "size",
+          "account": "review_claimant_live1",
+          "from": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+          "args": [
+            40
+          ],
+          "value": "0",
+          "hash": "0x770d6132a9c7cad3645e478ea12a405eedaa3e6e4049b23abeabdcfc237c18ce",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 40,
+          "refusal": null,
+          "seconds_to_decision": 22
+        },
+        {
+          "at": "2026-11-09T13:43:01.106Z",
+          "key": "size-read",
+          "ok": true,
+          "claim_id": 40,
+          "status": "SIZED",
+          "reading1": "M",
+          "tier": "M",
+          "pay": "120000000000000000"
+        },
+        {
+          "at": "2026-11-09T13:43:12.816Z",
+          "key": "appeal",
+          "method": "appeal",
+          "account": "review_claimant_live1",
+          "from": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+          "args": [
+            40
+          ],
+          "value": "10000000000000000",
+          "hash": "0x1b83868f309b907cadc7c32d85f674fee3233d536e3fcaf0a9333016dd41eeb7",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 40,
+          "refusal": null,
+          "seconds_to_decision": 12
+        },
+        {
+          "at": "2026-11-09T13:43:52.734Z",
+          "key": "size2",
+          "method": "size",
+          "account": "review_claimant_live1",
+          "from": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+          "args": [
+            40
+          ],
+          "value": "0",
+          "hash": "0x621ad47c64472acb1013abda9a9d625ebde0040f5aaf7a72831e3e6affebd77a",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 40,
+          "refusal": null,
+          "seconds_to_decision": 40
+        },
+        {
+          "at": "2026-11-09T13:43:53.527Z",
+          "key": "appeal-read",
+          "ok": true,
+          "claim_id": 40,
+          "status": "SIZED",
+          "reading1": "M",
+          "reading2": "M",
+          "tier": "M",
+          "pay": "120000000000000000",
+          "fee_to": "pool"
+        },
+        {
+          "at": "2026-11-09T13:44:00.461Z",
+          "key": "claim-vague",
+          "method": "claim",
+          "account": "review_other_live1",
+          "from": "0x4E046cd68E04C6db5452AC714ce89F0a77D7C534",
+          "args": [
+            5,
+            "I worked really hard on community stuff"
+          ],
+          "value": "0",
+          "hash": "0xaa61aed99afb5d9ed875315f92f63253c54fd36fbf9ffda5c8e9469b0234756b",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 41,
+          "refusal": null,
+          "seconds_to_decision": 7
+        },
+        {
+          "at": "2026-11-09T13:44:12.562Z",
+          "key": "size-vague",
+          "method": "size",
+          "account": "review_other_live1",
+          "from": "0x4E046cd68E04C6db5452AC714ce89F0a77D7C534",
+          "args": [
+            41
+          ],
+          "value": "0",
+          "hash": "0xe69e14e73fb3bf385b504c808ca0c4066c016a3f5dd5a2eb8014509cb659154c",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 41,
+          "refusal": null,
+          "seconds_to_decision": 12
+        },
+        {
+          "at": "2026-11-09T13:44:13.077Z",
+          "key": "vague-read",
+          "ok": true,
+          "claim_id": 41,
+          "status": "UNSIZED",
+          "reading1": "NONE",
+          "pay": "0"
+        },
+        {
+          "at": "2026-11-09T13:44:55.997Z",
+          "key": "claimant-withdraw",
+          "method": "withdraw",
+          "account": "review_claimant_live1",
+          "from": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+          "args": [],
+          "value": "0",
+          "hash": "0x1cb9307b5a4f5411a0290b067382b85f15fac5d523ed1ad75993ce6773070210",
+          "ok": true,
+          "status": "ACCEPTED",
+          "execution": "SUCCESS",
+          "returned": 120000000000000000,
+          "refusal": null,
+          "seconds_to_decision": 7,
+          "final_status": "FINALIZED"
+        },
+        {
+          "at": "2026-11-09T13:44:56.991Z",
+          "key": "balance-claimant",
+          "ok": false,
+          "owed": "120000000000000000",
+          "before": "19889764059749957649",
+          "after": "20109559078999985885",
+          "net_fee": "151305250002823",
+          "expected": "20009612754499954826",
+          "difference": "99946324500031059"
+        },
+        {
+          "at": "2026-11-09T13:44:58.907Z",
+          "key": "page-card",
+          "ok": true,
+          "url": "https://ratecard-genlayer.vercel.app/k/5",
+          "http": 200
+        },
+        {
+          "at": "2026-11-09T13:44:59.953Z",
+          "key": "page-claim",
+          "ok": true,
+          "url": "https://ratecard-genlayer.vercel.app/c/40",
+          "http": 200
+        },
+        {
+          "at": "2026-11-09T13:45:00.563Z",
+          "key": "page-vague",
+          "ok": true,
+          "url": "https://ratecard-genlayer.vercel.app/c/41",
+          "http": 200
+        }
+      ],
+      "accounts": {
+        "owner": "0x4497D5B8Cdd9c1f256aB0A2A21e0c10866A3Ea66",
+        "claimant": "0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357",
+        "other": "0x4E046cd68E04C6db5452AC714ce89F0a77D7C534",
+        "nonces_at_start": {
+          "owner": 0,
+          "claimant": 0,
+          "other": 0
+        }
+      },
+      "finished": "2026-11-09T13:45:00.563Z"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Project name": "Ratecard",
+  "Primary tag": "Social",
+  "Tag 1": "Creator Rewards",
+  "Tag 2": "Group Consensus",
+  "One-liner": "Price the work before anyone argues about it: a rate card for contributor pay.",
+  "Description": "Ratecard is a rate card for contributor pay on GenLayer. A team writes a ladder of five example jobs from XS to XL with a price each and funds a pool. Contributors describe work they did. An owner review window lets the team veto a claim first. Validators then place each claim on the ladder by comparing it with the examples and must agree on one label. The contract looks the price up on the card and applies a cap, so the model never sets a number. One paid re-read with the ladder reversed lets a contributor contest a size. Live on Studio Next, with golden claims run through real consensus, read three times each for stability, and published as they came out.",
+  "Step 1 title": "Open a card",
+  "Step 1": "Open https://ratecard-genlayer.vercel.app/new, select Connect wallet, then Switch network and Get test GEN. Write five example jobs with prices, set a cap, a review window and an appeal fee, add the first funding, then select Open the card and confirm. Or skip this and use any card in the Cards list on the home page.",
+  "Step 2 title": "Make a claim",
+  "Step 2": "Open the card page and select Make a claim. Describe the work in your own words, for example Hosted four weekly calls with written notes, then select Submit my claim and confirm.",
+  "Step 3 title": "Size it",
+  "Step 3": "After the review window, open the claim and select Size this claim. The page shows Validators are sizing, then the ladder with a marker on the example the claim landed on and the price credited.",
+  "Step 4 title": "Appeal",
+  "Step 4": "If you disagree, select Appeal this size and pay the appeal fee. The claim is read again with the ladder reversed; the fee returns to you if the result changed.",
+  "Step 5 title": "Withdraw",
+  "Step 5": "Open My claims and select Withdraw to take your balance. A veto, if the owner uses it, comes before any of this inside the review window.",
+  "Proof": "Walked on the live site from three fresh accounts through its own signing code: faucet, open_card, claim, size, appeal, size again, an unsized claim, withdraw. The spec's own claim, Hosted four weekly calls with written notes, was SIZED M and paid the M price; the appeal read the reversed ladder and kept M, so the fee went to the pool; a claim describing no work was UNSIZED and paid nothing. To confirm a write, read the leader result in the settling transaction: execution_result SUCCESS, not just ACCEPTED. Golden claims: 10 of 10, and 30 of 30 readings identical across three runs. Held-out claims were read once. 68 of 68 mutants caught.",
+  "Steward note": "Known limits: Ratecard sizes what is described and cannot see the work, so the review window and veto are the check. Size is scope and effort, not quality. The spec contradicts itself on reserved amounts; the choice made is documented. The runtime header differs from earlier projects because the live network rejected the old one the day this was built. Per-step balance checks were not reconciled to the wei.",
+  "Website": "https://ratecard-genlayer.vercel.app",
+  "GitHub": "https://github.com/meitipro/ratecard"
+}
