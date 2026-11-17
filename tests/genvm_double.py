@@ -329,6 +329,30 @@ class _Evm:
         return Proxy
 
 
+class _Chain:
+    """
+    `gl.chain.Account(address).emit_transfer(value)`, the v0.4 way to pay an
+    account. The transfer applies on finalization and never runs recipient code;
+    here it is recorded on the bus like any other payout.
+    """
+
+    def __init__(self, bus: Bus) -> None:
+        bus_ref = bus
+
+        class Account:
+            def __init__(self, address: Address) -> None:
+                self.address = address
+
+            def emit_transfer(self, value: int) -> None:
+                if NondetGuard.active:
+                    raise VMError("messages cannot be sent from a non-deterministic block")
+                if int(value) <= 0:
+                    raise ValueError("value is zero")
+                bus_ref.transfers.append(Transfer(self.address.as_hex, int(value)))
+
+        self.Account = Account
+
+
 class Contract:
     """
     Base class. Zero-initialises annotated storage fields the way GenVM does, so
@@ -364,6 +388,7 @@ class GL:
         self.public = _Public()
         self.message = _Message()
         self.evm = _Evm(self.bus)
+        self.chain = _Chain(self.bus)
         self.contract = _Namespace(Contract=Contract)
         # The v0.2 names Studionet's runtime uses for the same things. Each is
         # the object above under its old name, never a second implementation:

@@ -1,0 +1,55 @@
+  0xdDA52d45 0.00 -> 1000.00 GEN
+  0xe7672a1e 0.00 -> 1000.00 GEN
+  0x261cB6AE 0.00 -> 1000.00 GEN
+  0x0744516e 0.00 -> 1000.00 GEN
+  0xB5315293 0.00 -> 1000.00 GEN
+  0x42D1B39b 0.00 -> 1000.00 GEN
+  0x67327225 0.00 -> 1000.00 GEN
+  open_card 0x5a0873eff24aff7e939873e7f03f095d56266e6179c89d5fa6cea140da29660e
+kiln:open_card: ok https://explorer-studio-dev.genlayer.com/tx/0x5a0873eff24aff7e939873e7f03f095d56266e6179c89d5fa6cea140da29660e
+  claim 0x0f06e616d29811706207c45231122dbe30f692fb14092929ac517f0b77f0b1c7
+ada:claim: ok https://explorer-studio-dev.genlayer.com/tx/0x0f06e616d29811706207c45231122dbe30f692fb14092929ac517f0b77f0b1c7
+  claim 0xc9046b7892d65196ec6c897f4e610f8253798d671c97a33be1bb78c15753e123
+bo:claim: ok https://explorer-studio-dev.genlayer.com/tx/0xc9046b7892d65196ec6c897f4e610f8253798d671c97a33be1bb78c15753e123
+  claim 0xd55d1fc22edc3bc1de3eb967a703094e2c711a92c564988bcfdbcd82e50d3f20
+cy:claim: ok https://explorer-studio-dev.genlayer.com/tx/0xd55d1fc22edc3bc1de3eb967a703094e2c711a92c564988bcfdbcd82e50d3f20
+  claim 0x9531128e9c55a23e3422eb59171349fc5be4f0932779f38e28a9ff2162ddc567
+dee:claim: ok https://explorer-studio-dev.genlayer.com/tx/0x9531128e9c55a23e3422eb59171349fc5be4f0932779f38e28a9ff2162ddc567
+  veto 0x8e5228e957013f4d00fe7105215555d46330aced2cae15068fe61c8e00098f83
+dee:veto: ok https://explorer-studio-dev.genlayer.com/tx/0x8e5228e957013f4d00fe7105215555d46330aced2cae15068fe61c8e00098f83
+  dee: claim 38 -> VETOED  0.0 GEN
+  open_card 0x1b1122fb2879532fbf6cd4b93fa785bf22a21338ebc4e4d871bae4c1e3378b50
+capped:open_card: ok https://explorer-studio-dev.genlayer.com/tx/0x1b1122fb2879532fbf6cd4b93fa785bf22a21338ebc4e4d871bae4c1e3378b50
+  claim 0x0468db4466725a6856e10dc0adab6f57ff0bf1c491bdf55481f2c07782c0e01f
+ed:claim: ok https://explorer-studio-dev.genlayer.com/tx/0x0468db4466725a6856e10dc0adab6f57ff0bf1c491bdf55481f2c07782c0e01f
+  size 0x0efced48c0967fa9ff200a3d7aad7b9cad4d7866cc98d216765efdfb7f97caec
+ed:size: ok https://explorer-studio-dev.genlayer.com/tx/0x0efced48c0967fa9ff200a3d7aad7b9cad4d7866cc98d216765efdfb7f97caec
+  ed: claim 39 -> CAPPED XL 12.0 GEN
+waiting 3616 seconds for the Kiln review window
+  retry 1/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+  retry 2/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+  retry 3/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+  retry 4/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+  retry 5/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+  retry 6/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+  retry 7/8 on fee estimate for size: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).
+Traceback (most recent call last):
+  File "D:\ratecard\scripts\seed.py", line 229, in <module>
+    seed()
+  File "D:\ratecard\scripts\seed.py", line 159, in seed
+    step(record, f"{who}:size", chains["seed_" + who], "size", [ids[who]])
+  File "D:\ratecard\scripts\seed.py", line 74, in step
+    outcome = chain.send(C.address(), method, args, value)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ratecard\scripts\chain.py", line 378, in send
+    tx = self.write(address, method, args, value)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ratecard\scripts\chain.py", line 329, in write
+    call["fees"] = self.fees_for(method)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ratecard\scripts\chain.py", line 325, in fees_for
+    return _fee_options(retry("fee estimate for " + method, self.client.estimate_transaction_fees, options))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ratecard\scripts\chain.py", line 209, in retry
+    raise RuntimeError(f"{what} failed after {RETRIES} attempts: {last}")
+RuntimeError: fee estimate for size failed after 8 attempts: Fee policy estimation is not supported on this chain (missing fee_manager_contract and sim_getFeeConfig).

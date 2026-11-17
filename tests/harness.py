@@ -51,7 +51,7 @@ def _install(gl: D.GL) -> None:
     module.Address = D.Address
     for name in ("u8", "u16", "u32", "u64", "u256"):
         setattr(module, name, getattr(D, name))
-    for name in ("contract", "vm", "message", "public", "nondet", "evm"):
+    for name in ("contract", "vm", "message", "public", "nondet", "evm", "chain"):
         setattr(module, name, getattr(gl, name))
     module.storage = storage
     module.__all__ = ["Address", "u8", "u16", "u32", "u64", "u256"]

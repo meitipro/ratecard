@@ -24,7 +24,7 @@ import genvm_double as D
 
 SOURCE = CONTRACT.read_text(encoding="utf-8")
 TREE = ast.parse(SOURCE)
-RUNTIME = "py-genlayer:babwp9t37jw9g4j2bccgn14g6x7x9s1f7dsmh7emvz735pz4zxa0"
+RUNTIME = "py-genlayer:kzybg95x1gn21dw72m7hyg0maaap04n4nx55j9yt6fkdqxtz6bz0"
 
 
 def contract_class() -> ast.ClassDef:
@@ -111,7 +111,7 @@ def test_the_runtime_is_pinned():
     lines = SOURCE.splitlines()
     assert lines[0] == "# v0.3.0"
     assert lines[1] == '# { "Depends": "' + RUNTIME + '" }'
-    for banned in ("py-genlayer:test", "py-genlayer:latest", "1jb45aa8", "5jycge4q"):
+    for banned in ("py-genlayer:test", "py-genlayer:latest", "1jb45aa8", "babwp9t3", "5jycge4q", "5jycge4q"):
         assert banned not in SOURCE
 
 
@@ -192,7 +192,7 @@ def test_caller_writes_land_on_the_caller():
     assert "owner=gl.message.sender_address" in text["open_card"]
     assert "claimant=gl.message.sender_address" in text["claim"]
     assert "me = gl.message.sender_address" in text["withdraw"]
-    assert "self.balances.get(me" in text["withdraw"] and "_Payee(me)" in text["withdraw"]
+    assert "self.balances.get(me" in text["withdraw"] and "gl.chain.Account(me)" in text["withdraw"]
 
 
 def test_open_writes_record_the_caller():
@@ -228,14 +228,14 @@ def test_money_leaves_only_through_withdraw():
     senders = {name for name, node in methods("write").items() if any(c.endswith("emit_transfer") for c in calls(node))}
     assert senders == {"withdraw"}
     transfers = [ast.unparse(n.func) for n in ast.walk(TREE) if isinstance(n, ast.Call) and ast.unparse(n.func).endswith("emit_transfer")]
-    assert transfers == ["_Payee(me).emit_transfer"]
+    assert transfers == ["gl.chain.Account(me).emit_transfer"]
     assert "emit(" not in SOURCE.replace("emit_transfer(", "")
 
 
 def test_size_veto_and_appeal_never_move_money():
     for name in ("open_card", "fund_card", "claim", "veto", "size", "appeal"):
         text = ast.unparse(methods("write")[name])
-        assert "emit" not in text and "_Payee" not in text, name
+        assert "emit" not in text and "gl.chain" not in text, name
     assert "emit" not in ast.unparse(function("_settle"))
 
 

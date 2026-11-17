@@ -1,0 +1,42 @@
+  open_card 0xa127817c58eaca6b09b8863f48733b42ac8efbe71808589d310f79022dafbd32
+kiln:open_card: ok https://explorer-studio-dev.genlayer.com/tx/0xa127817c58eaca6b09b8863f48733b42ac8efbe71808589d310f79022dafbd32
+  claim 0xcffaee0226e666248f7fb72574342847a90a4beff41c1569010912f880b18d5d
+ada:claim: ok https://explorer-studio-dev.genlayer.com/tx/0xcffaee0226e666248f7fb72574342847a90a4beff41c1569010912f880b18d5d
+  claim 0xe4f9d5848371d1652a928af1c848a2b233af75102469890ee81dd09d51273021
+bo:claim: ok https://explorer-studio-dev.genlayer.com/tx/0xe4f9d5848371d1652a928af1c848a2b233af75102469890ee81dd09d51273021
+  claim 0x4196f9ded1dad14bec7ddd0164252020e3339eb5eb450a04437da21b64b6be60
+cy:claim: ok https://explorer-studio-dev.genlayer.com/tx/0x4196f9ded1dad14bec7ddd0164252020e3339eb5eb450a04437da21b64b6be60
+  claim 0xc525b4937e48df1aeef14611663a2a244b601be7501ef4a4cbcbc9cac3548011
+dee:claim: ok https://explorer-studio-dev.genlayer.com/tx/0xc525b4937e48df1aeef14611663a2a244b601be7501ef4a4cbcbc9cac3548011
+  veto 0x8823f558bed995451bd645bbf00b1c59c34ed398c95240b6bf13ca180ba63553
+dee:veto: ok https://explorer-studio-dev.genlayer.com/tx/0x8823f558bed995451bd645bbf00b1c59c34ed398c95240b6bf13ca180ba63553
+  dee: claim 37 -> VETOED  0.0 GEN
+  open_card 0x30f20c566a41a228dba2f0f22d312d5eab31372d155bdc7db3eed67e0d135967
+capped:open_card: ok https://explorer-studio-dev.genlayer.com/tx/0x30f20c566a41a228dba2f0f22d312d5eab31372d155bdc7db3eed67e0d135967
+  claim 0x0a40357ee782b1dff71cb75022d6f02e6f7c32355a8fb376424a29fed9a296a3
+ed:claim: ok https://explorer-studio-dev.genlayer.com/tx/0x0a40357ee782b1dff71cb75022d6f02e6f7c32355a8fb376424a29fed9a296a3
+  size 0x9ec9ce8ae26f83f1352c79d23382d963daa40bdc09347acb01883bf633787986
+ed:size: ok https://explorer-studio-dev.genlayer.com/tx/0x9ec9ce8ae26f83f1352c79d23382d963daa40bdc09347acb01883bf633787986
+  ed: claim 38 -> CAPPED XL 12.0 GEN
+waiting 3617 seconds for the Kiln review window
+  size 0x839f12ee7d85b94651d08f44fca86c763b55d84b780d94ec580b37615d57661b
+ada:size: ok https://explorer-studio-dev.genlayer.com/tx/0x839f12ee7d85b94651d08f44fca86c763b55d84b780d94ec580b37615d57661b
+  ada: claim 34 -> SIZED XS 2.0 GEN
+  size 0xd159a8474003cb0cd73f95ffa0c022199922d706a74e4bf42ec7c706a7feee91
+bo:size: ok https://explorer-studio-dev.genlayer.com/tx/0xd159a8474003cb0cd73f95ffa0c022199922d706a74e4bf42ec7c706a7feee91
+  bo: claim 35 -> SIZED M 12.0 GEN
+  size 0x2ce1f27714edfc38d5a479d55337a37580ef478f7a7c1b4dbfb3c6937690bf4a
+cy:size: ok https://explorer-studio-dev.genlayer.com/tx/0x2ce1f27714edfc38d5a479d55337a37580ef478f7a7c1b4dbfb3c6937690bf4a
+  cy: claim 36 -> UNSIZED NONE 0.0 GEN
+  appeal 0xa33455767e14e2311160e15a3a8cdedb6ad502be10409ecd900ff299aa9eb2eb
+bo:appeal: ok https://explorer-studio-dev.genlayer.com/tx/0xa33455767e14e2311160e15a3a8cdedb6ad502be10409ecd900ff299aa9eb2eb
+  size 0x2a5a153d51047b5eb208b4316bed9040d85dfa885abd7c072241609f836ce020
+bo:size2: ok https://explorer-studio-dev.genlayer.com/tx/0x2a5a153d51047b5eb208b4316bed9040d85dfa885abd7c072241609f836ce020
+  bo: claim 35 -> SIZED M / M 12.0 GEN
+  withdraw 0xdb2113105871d30e9c8af23ffd1f2061da7b4505538989faf5d4355a9afe0f16
+ada:withdraw: ok https://explorer-studio-dev.genlayer.com/tx/0xdb2113105871d30e9c8af23ffd1f2061da7b4505538989faf5d4355a9afe0f16
+  withdraw 0xf4f56f22be9da4f97e19847c85d79454b6f30b8139b6454aabff69c1ae29ce3b
+bo:withdraw: ok https://explorer-studio-dev.genlayer.com/tx/0xf4f56f22be9da4f97e19847c85d79454b6f30b8139b6454aabff69c1ae29ce3b
+  withdraw 0x1356dcddbb8904cd6d16d30b0da4d82c7374f2e1210f4db9483ec331ca46f94d
+ed:withdraw: ok https://explorer-studio-dev.genlayer.com/tx/0x1356dcddbb8904cd6d16d30b0da4d82c7374f2e1210f4db9483ec331ca46f94d
+wrote docs/seed.studio-next.md

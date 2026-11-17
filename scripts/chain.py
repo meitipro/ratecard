@@ -55,7 +55,7 @@ CHAIN_ID = 61997
 # studio-next.genlayer.com and studio-dev.genlayer.com are one network; the spec names the first.
 RPC = os.environ.get("RATECARD_RPC", "https://studio-next.genlayer.com/api")
 EXPLORER = "https://explorer-studio-dev.genlayer.com"
-RUNTIME = "py-genlayer:babwp9t37jw9g4j2bccgn14g6x7x9s1f7dsmh7emvz735pz4zxa0"
+RUNTIME = "py-genlayer:kzybg95x1gn21dw72m7hyg0maaap04n4nx55j9yt6fkdqxtz6bz0"
 CONTRACT_FILE = ROOT / "contracts" / "ratecard.py"
 
 

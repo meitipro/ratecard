@@ -1,21 +1,35 @@
-accounts: {"owner":"0x4497D5B8Cdd9c1f256aB0A2A21e0c10866A3Ea66","claimant":"0xAA615dE4bdf52A9E13AD1Ba01Ace24468598a357","other":"0x4E046cd68E04C6db5452AC714ce89F0a77D7C534"} nonces at start {"owner":0,"claimant":0,"other":0}
+accounts: {"owner":"0xA2d90869fd3c2B291725303C932E5de65426e23E","claimant":"0x70fcf67337B21cAB35235D9df291C98a7d61Fe71","other":"0xD2F92892EB6b30BfaeC190377c41858603AC7F52"} nonces at start {"owner":0,"claimant":0,"other":0}
 faucet-owner: HTTP 200 0 GEN -> 20 GEN 
 faucet-claimant: HTTP 200 0 GEN -> 20 GEN 
 faucet-other: HTTP 200 0 GEN -> 20 GEN 
-open-card: open_card ok in 7 s  0xf71d93029d38331470befd1750943bd1252bd9f563c3abcf04394ddef4b9cb25
-claim: claim ok in 7 s  0x7f0f4031d4766dd7325b97c32ca79f1f94686b85f77f6802c6237d6f3d3502f8
-size: size ok in 22 s  0x770d6132a9c7cad3645e478ea12a405eedaa3e6e4049b23abeabdcfc237c18ce
+open-card: open_card ok in 12 s  0xd702086eb2786f21ae4ff875b3029621150c10aa1b2b6c3381fccec72392d4bd
+claim: claim ok in 7 s  0xcd45889ac79078041e35516803ab5e481f3556b867933d9318eaa339a93bdb72
+size: size ok in 12 s  0x5721fb5b161b9c264000260b48470d015230c297f0b34e32d7b241b3013b7390
   -> SIZED M pays 0.12 GEN
-appeal: appeal ok in 12 s  0x1b83868f309b907cadc7c32d85f674fee3233d536e3fcaf0a9333016dd41eeb7
-size2: size ok in 40 s  0x621ad47c64472acb1013abda9a9d625ebde0040f5aaf7a72831e3e6affebd77a
+appeal: appeal ok in 7 s  0x31947834e8901438890bbc2f8048615a2b50c3bdecd44e867eb49156fa9da42a
+size2: size ok in 19 s  0x300f5b37f57e97a6f1f378f5c3f50e35c54b191ee0f83dc712f85aeb18e3a491
   -> after the appeal: SIZED M / M, appeal fee to pool
-claim-vague: claim ok in 7 s  0xaa61aed99afb5d9ed875315f92f63253c54fd36fbf9ffda5c8e9469b0234756b
-size-vague: size ok in 12 s  0xe69e14e73fb3bf385b504c808ca0c4066c016a3f5dd5a2eb8014509cb659154c
+claim-vague: claim ok in 7 s  0xe123b5c172911c951cd21637de99e87e879c964d7a72d5dc0f3622c5c3746cce
+size-vague: size ok in 17 s  0x735dd936a93df050fc6cb9c53310ff1e60a51742d923b59cc035b1e8756d0a09
   -> UNSIZED NONE, pays 0 GEN
-claimant-withdraw: withdraw ok in 7 s  0x1cb9307b5a4f5411a0290b067382b85f15fac5d523ed1ad75993ce6773070210
-  claimant: 19.889764059749957 GEN -> 20.109559078999986 GEN; owed 0.12 GEN, fee 0.000151305250002823 GEN; difference 99946324500031059 wei
-page-card: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/k/5
-page-claim: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/c/40
-page-vague: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/c/41
+claimant-withdraw: withdraw ok in 7 s  0x68449d011007a40ea49f5c5cdd95378c3be9899200e49f5cc6f39c8b99f6844a
+  claimant: 19.98968538499999 GEN -> 20.109559079249987 GEN; owed 0.12 GEN, fee 0.000151305750002823 GEN; difference 25000000000000 wei
+page-card: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/k/4
+page-claim: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/c/39
+page-vague: HTTP 200 shows it  https://ratecard-genlayer.vercel.app/c/40
 
-recorded in docs/reviewer-path.studio-next.json (run live1)
+recorded in docs/reviewer-path.studio-next.json (run rp1)
+exit 0
+owner 0xA2d90869fd3c2B291725303C932E5de65426e23E: faucet 20000000000000000000 + received 0 - sent 5000000000000000000 - fees 78634500002823 = 14999921365499997177; balance 14999921365499997177; EXACT to the wei; message fee consumed 0; without it EXACT
+file:///D:/ratecard/web/scripts/reconcile.mjs:56
+  const mine = writes.filter((s) => s.from.toLowerCase() === address.toLowerCase());
+                                                                     ^
+
+TypeError: Cannot read properties of undefined (reading 'toLowerCase')
+    at file:///D:/ratecard/web/scripts/reconcile.mjs:56:70
+    at Array.filter (<anonymous>)
+    at file:///D:/ratecard/web/scripts/reconcile.mjs:56:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.19.0
+reconcile exit 1

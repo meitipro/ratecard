@@ -36,7 +36,7 @@ Refusals raised in the method itself (helpers such as the tier and text checks a
 - `[EXPECTED] the cap tier is one of XS, S, M, L, XL`
 - `[EXPECTED] the review window is … to … hours`
 
-[Source, line 557](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L557)
+[Source, line 550](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L550)
 
 ## fund_card
 
@@ -50,7 +50,7 @@ Refusals raised in the method itself (helpers such as the tier and text checks a
 
 - `[EXPECTED] send the GEN to add to the pool`
 
-[Source, line 600](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L600)
+[Source, line 593](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L593)
 
 ## claim
 
@@ -60,7 +60,7 @@ claim(card_id: int, work: str) -> int
 
 **Write.** Submit a description of work. It reserves nothing yet and enters the card's review window.
 
-[Source, line 614](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L614)
+[Source, line 607](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L607)
 
 ## veto
 
@@ -76,7 +76,7 @@ Refusals raised in the method itself (helpers such as the tier and text checks a
 - `[EXPECTED] the review window has ended`
 - `[EXPECTED] this claim is not waiting for its first sizing`
 
-[Source, line 647](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L647)
+[Source, line 640](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L640)
 
 ## size
 
@@ -92,7 +92,7 @@ Refusals raised in the method itself (helpers such as the tier and text checks a
 - `[EXPECTED] the review window has not ended`
 - `[EXPECTED] this claim has nothing waiting to be sized`
 
-[Source, line 665](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L665)
+[Source, line 658](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L658)
 
 ## appeal
 
@@ -110,7 +110,7 @@ Refusals raised in the method itself (helpers such as the tier and text checks a
 - `[EXPECTED] send exactly …`
 - `[EXPECTED] this card has no appeal fee, send nothing`
 
-[Source, line 689](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L689)
+[Source, line 682](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L682)
 
 ## withdraw
 
@@ -124,7 +124,7 @@ Refusals raised in the method itself (helpers such as the tier and text checks a
 
 - `[EXPECTED] nothing to withdraw`
 
-[Source, line 715](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L715)
+[Source, line 708](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L708)
 
 ## get_card
 
@@ -134,7 +134,7 @@ get_card(card_id: int) -> str
 
 **View.** Anchors, prices, cap, pool, window and counts. &#123;"found": false&#125; when there is none; card 0 answers the totals.
 
-[Source, line 759](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L759)
+[Source, line 752](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L752)
 
 ## get_claim
 
@@ -144,7 +144,7 @@ get_claim(claim_id: int) -> str
 
 **View.** Work text, readings, tier, verdict and pay, with the claimant's withdrawable balance. &#123;"found": false&#125; when there is none.
 
-[Source, line 798](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L798)
+[Source, line 791](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L791)
 
 ## list_claims
 
@@ -154,4 +154,4 @@ list_claims(card_id: int, offset: int, limit: int) -> str
 
 **View.** Claims newest first: one card's, or across every card when card_id is 0.
 
-[Source, line 809](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L809)
+[Source, line 802](https://github.com/meitipro/ratecard/blob/main/contracts/ratecard.py#L802)

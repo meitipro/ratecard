@@ -5,7 +5,7 @@
 A team writes a ladder of five example jobs from XS to XL with a price each, a cap, a review window and an appeal fee, and funds a pool. Contributors describe work they did. After the owner's review window, GenLayer validators place each claim on the ladder by comparing it with the examples, and the price printed on the card is paid. The model answers one label; the contract looks the price up on the card. Nobody negotiates, and nobody is paid more because they wrote a longer story.
 
 - **Network:** GenLayer Studio Next, chain 61997 (`0xF22D`)
-- **Contract:** [`0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF`](https://explorer-studio-dev.genlayer.com/address/0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF), deployed in [`0xedeb38f0…a407`](https://explorer-studio-dev.genlayer.com/tx/0xedeb38f0f7d0858f2dd36d16d8a56b44b3df3272d415e606b2661b291be4a407)
+- **Contract:** [`0x25C135417170156C613e0ca98d89BaF38ebF4098`](https://explorer-studio-dev.genlayer.com/address/0x25C135417170156C613e0ca98d89BaF38ebF4098), deployed in [`0xe7121111…14ff`](https://explorer-studio-dev.genlayer.com/tx/0xe7121111b969379f4d77495f59689f5adc092ae2cfb6058461e69a1e077f14ff)
 - **Source:** `contracts/ratecard.py`, sha256 in `contracts/FROZEN.json`, held to the deployed bytes by `scripts/verify.py`
 
 ## How it works
@@ -37,10 +37,10 @@ Every number below was read from a file in this repository or from the chain.
 | Mutation testing | 68 of 68 defences broken one at a time and caught, each naming its test (`docs/MUTATIONS.md`) |
 | Golden claims, first reading | **10 of 10** matched through real consensus (`eval/results.md`) |
 | Stability | each golden claim read three times: **30 of 30** readings matched and all 10 claims were identical every time (`eval/stability.py`) |
-| Held-out claims | H1 `M`, H2 `S`, H3 `L`, read once, reported as they came out, no expected label |
+| Held-out claims | H1 `M`, H2 `S`, H3 `S`, read once, reported as they came out, no expected label |
 | Deployed source vs repository | identical (`python scripts/verify.py`) |
 
-Nothing was tuned: the prompt is the spec's, word for word, and `eval/golden.json` was hashed before the first run (`eval/golden.lock.json`). The eval card uses the Kiln ladder with the prices divided by 100 and a window of 0 so the pool lasts; the model never sees a price.
+Held-out claim H3 first ended UNDETERMINED, because the validators could not agree on a label, so it was sized again; both tries are in `eval/results.md`. Nothing was tuned: the prompt is the spec's, word for word, and `eval/golden.json` was hashed before the first run (`eval/golden.lock.json`). The eval card uses the Kiln ladder with the prices divided by 100 and a window of 0 so the pool lasts; the model never sees a price.
 
 ## Where the spec contradicts itself
 
@@ -48,7 +48,7 @@ The build spec says a claim "reserves nothing yet" and also that a veto returns 
 
 ## A note about the runtime
 
-The `5jycge4q…` runtime header that earlier Studio Next projects used was rejected by the live network on the day this was built (`invalid_contract runner malformed`). This contract uses `py-genlayer:babwp9t3…`, which the network accepted. The local linter does not know that runner yet, so it reads a copy of the file with the old header swapped in; only the header differs. The authority on the real header is `gen_getContractSchemaForCode`, which `scripts/deploy.py` calls before every deploy.
+This contract was first deployed on the GenVM v0.3 runner (`py-genlayer:babwp9t3…`), at `0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF`. Studio Next then removed that runner: the old contract stopped answering reads (`execution failed`) and new deploys with the v0.3 header are refused (`invalid_contract runner malformed`). It was redeployed on the v0.4 runner, header `py-genlayer:kzybg95x…`, and payouts use `gl.chain.Account(address).emit_transfer(value)`, the v0.4 form. Every result in this repository was produced again against the new address; the earlier records are kept under `archive-v0.3/` and are not cited. The local linter does not know the new runner yet, so it reads a copy of the file with an old header swapped in; only the header differs. The authority on the real header is `gen_getContractSchemaForCode`, which `scripts/deploy.py` calls before every deploy.
 
 ## Layout
 

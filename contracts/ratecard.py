@@ -1,5 +1,5 @@
 # v0.3.0
-# { "Depends": "py-genlayer:babwp9t37jw9g4j2bccgn14g6x7x9s1f7dsmh7emvz735pz4zxa0" }
+# { "Depends": "py-genlayer:kzybg95x1gn21dw72m7hyg0maaap04n4nx55j9yt6fkdqxtz6bz0" }
 """
 Ratecard - price the work before anyone argues about it.
 
@@ -353,19 +353,12 @@ def run_judgment(prompt: str) -> dict:
 
 
 # --- payout ---------------------------------------------------------------
-# A contributor is an ordinary account, which lives on the chain layer rather
-# than in GenVM. The external message form below is the one that addresses the
-# chain layer; a GenVM proxy would deliver the value as a contract call an
-# account cannot answer. A top-level payout sent this way arrives when the
-# transaction carries an External allocation for the payee at the root of its
-# fee tree.
-@gl.evm.contract_interface
-class _Payee:
-    class View:
-        pass
-
-    class Write:
-        pass
+# An applicant and an owner are ordinary accounts, which live on the chain
+# layer rather than in GenVM. On the v0.4 runner the way to pay one is
+# gl.chain.Account(address).emit_transfer(value): the transfer applies on
+# finalization and never runs recipient code. A top-level payout sent this way
+# arrives when the transaction carries an External allocation for the payee at
+# the root of its fee tree.
 
 
 @allow_storage
@@ -720,7 +713,7 @@ class Ratecard(gl.contract.Contract):
             raise gl.vm.UserError(E + "nothing to withdraw")
         self.balances[me] = u256(0)
         self.withdrawn[me] = u256(int(self.withdrawn.get(me, u256(0))) + amount)
-        _Payee(me).emit_transfer(value=u256(amount))
+        gl.chain.Account(me).emit_transfer(amount)
         return amount
 
     # -- views -------------------------------------------------------------

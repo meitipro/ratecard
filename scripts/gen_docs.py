@@ -402,7 +402,7 @@ def addresses_page() -> str:
         f"| Deployed | {entry['deployed_at']} |",
         f"| Deployer | [`{entry['ratecard_deployer']}`]({explorer}/address/{entry['ratecard_deployer']}) |",
         f"| Source | `contracts/ratecard.py`, sha256 `{entry['ratecard_sha256']}` |",
-        f"| Runtime | `{entry['runtime']}` (GenVM SDK v0.3) |",
+        f"| Runtime | `{entry['runtime']}` (GenVM v0.4) |",
         "| Network | GenLayer Studio Next |",
         f"| Chain id | {entry['chain_id']} (`0x{entry['chain_id']:x}`) |",
         "| RPC | `https://studio-next.genlayer.com/api` |",

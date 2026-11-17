@@ -23,4 +23,4 @@ description: Common questions, and what changed.
 
 **v1, November 2026.** The first deployment on Studio Next: ten methods, the judge prompt from the build spec word for word, label-only agreement, prices looked up on the card, top-level payouts only. The deployed address and source hash are on the [addresses page](/docs/reference/addresses).
 
-The runtime header is `py-genlayer:babwp9t3…`, the runner Studio Next accepted on the day this was deployed. The `5jycge4q…` header that earlier projects used was rejected by the live network that day (`invalid_contract runner malformed`), so it was replaced before the first deploy.
+**v2, November 2026.** Redeployed on the GenVM v0.4 runner, header `py-genlayer:kzybg95x…`, after Studio Next removed the v0.3 runner. The first contract (`0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF`) stopped answering reads, and new deploys with the v0.3 header are refused (`invalid_contract runner malformed`). Payouts use `gl.chain.Account(address).emit_transfer(value)`, the v0.4 form. The contract logic did not change, and every result on these pages was produced again against the new address.

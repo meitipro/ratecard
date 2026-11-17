@@ -1,0 +1,620 @@
+{
+  "runs": [
+    {
+      "case": "1",
+      "run": 1,
+      "claim_id": 2,
+      "claim_tx": "0xf77a147d82ecbb62b9d0d72ad40482cb79d5a503aacf583ea8a408cc48b654d6",
+      "tries": [
+        {
+          "tx": "0x9989986571b5c41c8bbac374a137ce5f95706b8154983997bc5f4385038eccdc",
+          "sent_at": "2026-11-09T13:07:04Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x9989986571b5c41c8bbac374a137ce5f95706b8154983997bc5f4385038eccdc"
+    },
+    {
+      "case": "2",
+      "run": 1,
+      "claim_id": 3,
+      "claim_tx": "0x43cc2759464df76eba1d309f4305ca378d5e35e763ec23848e3a9e2516aa6823",
+      "tries": [
+        {
+          "tx": "0x63fe7ce19956152c2c848b61fec3ff99e51b2d00fc7b550ffb8b0e8f98c769e1",
+          "sent_at": "2026-11-09T13:08:08Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x63fe7ce19956152c2c848b61fec3ff99e51b2d00fc7b550ffb8b0e8f98c769e1"
+    },
+    {
+      "case": "3",
+      "run": 1,
+      "claim_id": 4,
+      "claim_tx": "0x617f6794b6a97beecb40b3289056cf430b811e107663592e1fdca7a4962c4912",
+      "tries": [
+        {
+          "tx": "0x21531f1b20a6e1ec5293946550b46a2c74efd48dc636245b8c08f535a2e553ff",
+          "sent_at": "2026-11-09T13:08:35Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x21531f1b20a6e1ec5293946550b46a2c74efd48dc636245b8c08f535a2e553ff"
+    },
+    {
+      "case": "4",
+      "run": 1,
+      "claim_id": 5,
+      "claim_tx": "0x9455a396518d9e24ac4a1b5da8d094fec1dbf5d4bfd28df87da8061c988fed7a",
+      "tries": [
+        {
+          "tx": "0x64c11190824b1cbde201fbc521dc715f3495222ce7be3c6a60bba9f5d0375208",
+          "sent_at": "2026-11-09T13:08:58Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x64c11190824b1cbde201fbc521dc715f3495222ce7be3c6a60bba9f5d0375208"
+    },
+    {
+      "case": "5",
+      "run": 1,
+      "claim_id": 6,
+      "claim_tx": "0x552b2b2f51e9f76e981215a911bf87082665ea1ba687119fa7698dfb09305d6b",
+      "tries": [
+        {
+          "tx": "0x982986d93dbcc65227d186608963f1adadbd83b91a84351f5939b1902a330f01",
+          "sent_at": "2026-11-09T13:09:20Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x982986d93dbcc65227d186608963f1adadbd83b91a84351f5939b1902a330f01"
+    },
+    {
+      "case": "6",
+      "run": 1,
+      "claim_id": 7,
+      "claim_tx": "0xfb604b65a4759b66383564aec7382d03ad93f60310aa20a765170a07da9df5d1",
+      "tries": [
+        {
+          "tx": "0x8fb5a0ab50ecb86d4b80d1e3d7a3b7ce9805cad37e9fec1776b76081b4527fd3",
+          "sent_at": "2026-11-09T13:09:52Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "M",
+      "status": "SIZED",
+      "tier": "M",
+      "pay": "120000000000000000",
+      "size_tx": "0x8fb5a0ab50ecb86d4b80d1e3d7a3b7ce9805cad37e9fec1776b76081b4527fd3"
+    },
+    {
+      "case": "7",
+      "run": 1,
+      "claim_id": 8,
+      "claim_tx": "0xa68c7677c423e67932b85a22806afdc9de0ae254d8b342a7feac07b955a70824",
+      "tries": [
+        {
+          "tx": "0x2aef74f73b3fd3545d85c73e769a8fa8a5b404fb27df5e3a6ff302a44e4c397e",
+          "sent_at": "2026-11-09T13:10:14Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "L",
+      "status": "SIZED",
+      "tier": "L",
+      "pay": "300000000000000000",
+      "size_tx": "0x2aef74f73b3fd3545d85c73e769a8fa8a5b404fb27df5e3a6ff302a44e4c397e"
+    },
+    {
+      "case": "8",
+      "run": 1,
+      "claim_id": 9,
+      "claim_tx": "0xbab4fbb772dfbd30712e6d9d4a6224117dce6bdf70825ef8b696da595925e674",
+      "tries": [
+        {
+          "tx": "0x26eb13f56a3a6d688b0b665396963336f0779d87a9c5ddedaf493239a654dbd5",
+          "sent_at": "2026-11-09T13:10:47Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XL",
+      "status": "SIZED",
+      "tier": "XL",
+      "pay": "800000000000000000",
+      "size_tx": "0x26eb13f56a3a6d688b0b665396963336f0779d87a9c5ddedaf493239a654dbd5"
+    },
+    {
+      "case": "9",
+      "run": 1,
+      "claim_id": 10,
+      "claim_tx": "0x53f3ff7b1f806e179a16b2aa4fc10e7aff31832d1416c7f6f9da4d66335adafc",
+      "tries": [
+        {
+          "tx": "0x40852540f9556be5eb0384d376febd734af43c3e4e57f6a1fe66dd606bfcd979",
+          "sent_at": "2026-11-09T13:11:14Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "NONE",
+      "status": "UNSIZED",
+      "tier": "",
+      "pay": "0",
+      "size_tx": "0x40852540f9556be5eb0384d376febd734af43c3e4e57f6a1fe66dd606bfcd979"
+    },
+    {
+      "case": "10",
+      "run": 1,
+      "claim_id": 11,
+      "claim_tx": "0xfe1c7f5e10766eb286773d5153c0d55838cd72e1d1ff0c64913adf8326934c3c",
+      "tries": [
+        {
+          "tx": "0x4140feb8256d0fbb5835e1a8c01c7e932c4187f6678b85c2fe3760e46f78d675",
+          "sent_at": "2026-11-09T13:11:51Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x4140feb8256d0fbb5835e1a8c01c7e932c4187f6678b85c2fe3760e46f78d675"
+    },
+    {
+      "case": "H1",
+      "run": 1,
+      "claim_id": 12,
+      "claim_tx": "0x24c01c4932778e7712cdd9ca171308466a4d4d01768b7a930426f594a45a5308",
+      "tries": [
+        {
+          "tx": "0xf8e8041605ae51da56925d500c1d008e5670222e75932cd7d0a692ff7118316f",
+          "sent_at": "2026-11-09T13:12:37Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "M",
+      "status": "SIZED",
+      "tier": "M",
+      "pay": "120000000000000000",
+      "size_tx": "0xf8e8041605ae51da56925d500c1d008e5670222e75932cd7d0a692ff7118316f"
+    },
+    {
+      "case": "H2",
+      "run": 1,
+      "claim_id": 13,
+      "claim_tx": "0x65543ca7193e11d8716c64f8c459989b2d1baf6088b1e22b16bfa5030b326b6e",
+      "tries": [
+        {
+          "tx": "0x69ce304ace84db50a1d392fd5c855575227bfa15165a2712cf79267d45928375",
+          "sent_at": "2026-11-09T13:13:20Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x69ce304ace84db50a1d392fd5c855575227bfa15165a2712cf79267d45928375"
+    },
+    {
+      "case": "H3",
+      "run": 1,
+      "claim_id": 14,
+      "claim_tx": "0x462cdf766cece2c20730cc82a81a161fcdf88a2095a81a228ab1d47c059211ed",
+      "tries": [
+        {
+          "tx": "0x1b778fa9eb622e805d2cfd5da481e14389a408e93cc35b3262fc3647d325234d",
+          "sent_at": "2026-11-09T13:13:58Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "L",
+      "status": "SIZED",
+      "tier": "L",
+      "pay": "300000000000000000",
+      "size_tx": "0x1b778fa9eb622e805d2cfd5da481e14389a408e93cc35b3262fc3647d325234d"
+    },
+    {
+      "case": "1",
+      "run": 2,
+      "claim_id": 15,
+      "claim_tx": "0x17bc706820d7bcf596968820c5ade5feff651bcb4898a53bd9b8f3bcb2c82274",
+      "tries": [
+        {
+          "tx": "0x6ad5220a95743e2333bf181a55401d94e723c42cabaf61e1c776b5958db4c127",
+          "sent_at": "2026-11-09T13:14:28Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x6ad5220a95743e2333bf181a55401d94e723c42cabaf61e1c776b5958db4c127"
+    },
+    {
+      "case": "1",
+      "run": 3,
+      "claim_id": 16,
+      "claim_tx": "0x3fb10d730227c761b7b48e999eec56774adba36c4a240bc7096f97ab337b27e5",
+      "tries": [
+        {
+          "tx": "0xbc4cf697c56ccc7279adfb4fcc8c6823fadddfbb231ad029e50e34b052f68a86",
+          "sent_at": "2026-11-09T13:14:56Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0xbc4cf697c56ccc7279adfb4fcc8c6823fadddfbb231ad029e50e34b052f68a86"
+    },
+    {
+      "case": "2",
+      "run": 2,
+      "claim_id": 17,
+      "claim_tx": "0xcff5a966f36c044da35530c69c2ccddc4d80dce36158bb454900597584b91166",
+      "tries": [
+        {
+          "tx": "0x610ca9fd564a11c9c29bb8bf0aae0d91d7defaf35e9dc5b10b2b95bcd477d997",
+          "sent_at": "2026-11-09T13:15:33Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x610ca9fd564a11c9c29bb8bf0aae0d91d7defaf35e9dc5b10b2b95bcd477d997"
+    },
+    {
+      "case": "2",
+      "run": 3,
+      "claim_id": 18,
+      "claim_tx": "0x5869ad1c5a1b713c408d911a91241c688b6f9a888e455dfee471f0c17ec147bf",
+      "tries": [
+        {
+          "tx": "0x6ca3822b3a51e5d4e9c4286fb5941ea76c81fbea22b9e9cfd990ae37ddb71ac7",
+          "sent_at": "2026-11-09T13:16:01Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x6ca3822b3a51e5d4e9c4286fb5941ea76c81fbea22b9e9cfd990ae37ddb71ac7"
+    },
+    {
+      "case": "3",
+      "run": 2,
+      "claim_id": 19,
+      "claim_tx": "0x2cec16a8726f4242ed2c07e4d78ce49f9322e641c04887f94954d346d6c60ec5",
+      "tries": [
+        {
+          "tx": "0x7ed36065df516c3abddaa0eb8ea046c9ee13561270aebb0c4b29376c7cdf37ca",
+          "sent_at": "2026-11-09T13:16:33Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x7ed36065df516c3abddaa0eb8ea046c9ee13561270aebb0c4b29376c7cdf37ca"
+    },
+    {
+      "case": "3",
+      "run": 3,
+      "claim_id": 20,
+      "claim_tx": "0x132999e7f42784b1e0219ea533ebaa425e4ad7182206c729aacb4b34ba07a87e",
+      "tries": [
+        {
+          "tx": "0x5d83eb9058806125c3544831fdef79e81b7dcae95e6398ee26ca6b63855c6c89",
+          "sent_at": "2026-11-09T13:17:05Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x5d83eb9058806125c3544831fdef79e81b7dcae95e6398ee26ca6b63855c6c89"
+    },
+    {
+      "case": "4",
+      "run": 2,
+      "claim_id": 21,
+      "claim_tx": "0x8f1e19669a1ae7e6b96c5d2f4246e4425c5caf30475ceac738a44cdfd4b30093",
+      "tries": [
+        {
+          "tx": "0xfb58ecd061451393cc86967bb3d80afa4c9e29948f203ae35482272d19ff0f2d",
+          "sent_at": "2026-11-09T13:17:34Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0xfb58ecd061451393cc86967bb3d80afa4c9e29948f203ae35482272d19ff0f2d"
+    },
+    {
+      "case": "4",
+      "run": 3,
+      "claim_id": 22,
+      "claim_tx": "0x097f832374d9d65d4d7648c172a95e42fb85035c899f54a32e026a459611d582",
+      "tries": [
+        {
+          "tx": "0x40af342fd159b95d1f93ddc77b9b3b1325a4473ae4d92ee105aeef60f61154e4",
+          "sent_at": "2026-11-09T13:18:01Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x40af342fd159b95d1f93ddc77b9b3b1325a4473ae4d92ee105aeef60f61154e4"
+    },
+    {
+      "case": "5",
+      "run": 2,
+      "claim_id": 23,
+      "claim_tx": "0x6e3237fa7291d7b9380d7c566d3e572cd0409904be44a8741656764176a82340",
+      "tries": [
+        {
+          "tx": "0x85f82214ff2f560d9311c6accf509dd1d2ce1b81fb7e058852877cc08963327d",
+          "sent_at": "2026-11-09T13:18:22Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0x85f82214ff2f560d9311c6accf509dd1d2ce1b81fb7e058852877cc08963327d"
+    },
+    {
+      "case": "5",
+      "run": 3,
+      "claim_id": 24,
+      "claim_tx": "0x2da522b73ced55adc4befe72b867b05cc5581aa5d224a5ad86729096622dbaa9",
+      "tries": [
+        {
+          "tx": "0xa256d41e20e1c8aca45478d1ec520447879b51d3b7679bfacc2f47b7d9e4e210",
+          "sent_at": "2026-11-09T13:21:22Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "S",
+      "status": "SIZED",
+      "tier": "S",
+      "pay": "50000000000000000",
+      "size_tx": "0xa256d41e20e1c8aca45478d1ec520447879b51d3b7679bfacc2f47b7d9e4e210"
+    },
+    {
+      "case": "6",
+      "run": 2,
+      "claim_id": 25,
+      "claim_tx": "0xc8b96e7656fa532dd35c93eca788bfe781a23920943fc3de04d2e3049b43ca4b",
+      "tries": [
+        {
+          "tx": "0x73a277e0cc9c6d1230c5031d1df27a753148823479c66980d462c797ef7676e3",
+          "sent_at": "2026-11-09T13:21:43Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "M",
+      "status": "SIZED",
+      "tier": "M",
+      "pay": "120000000000000000",
+      "size_tx": "0x73a277e0cc9c6d1230c5031d1df27a753148823479c66980d462c797ef7676e3"
+    },
+    {
+      "case": "6",
+      "run": 3,
+      "claim_id": 26,
+      "claim_tx": "0x16c33401cafbb27d0083996363e6f92533a4e9182ea4852aea879e1b2c0b5fb1",
+      "tries": [
+        {
+          "tx": "0x8c4c961e56be31724a416bc8f1a31abf10200e400c02a34d17050df1388c36b4",
+          "sent_at": "2026-11-09T13:22:16Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "M",
+      "status": "SIZED",
+      "tier": "M",
+      "pay": "120000000000000000",
+      "size_tx": "0x8c4c961e56be31724a416bc8f1a31abf10200e400c02a34d17050df1388c36b4"
+    },
+    {
+      "case": "7",
+      "run": 2,
+      "claim_id": 27,
+      "claim_tx": "0xc9b258ba70189d4d18f47bdbecafbcb4b1dab40aa8edf59bb2f45429dc5b0f9b",
+      "tries": [
+        {
+          "tx": "0x45b28f3f11ed3a220670affd140ca5f80ac24fcc46948703ddbe904b579a1c38",
+          "sent_at": "2026-11-09T13:22:37Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "L",
+      "status": "SIZED",
+      "tier": "L",
+      "pay": "300000000000000000",
+      "size_tx": "0x45b28f3f11ed3a220670affd140ca5f80ac24fcc46948703ddbe904b579a1c38"
+    },
+    {
+      "case": "7",
+      "run": 3,
+      "claim_id": 28,
+      "claim_tx": "0x1e6a7edfd3c3245c92fd93220162a62fe7c6a2f5803f2abbf182f960479fd6e9",
+      "tries": [
+        {
+          "tx": "0x1e4dc0cc16bf4fadf84ddd044f53f6e7df78efdbe85a2d5479f6085f3117687d",
+          "sent_at": "2026-11-09T13:23:15Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "L",
+      "status": "SIZED",
+      "tier": "L",
+      "pay": "300000000000000000",
+      "size_tx": "0x1e4dc0cc16bf4fadf84ddd044f53f6e7df78efdbe85a2d5479f6085f3117687d"
+    },
+    {
+      "case": "8",
+      "run": 2,
+      "claim_id": 29,
+      "claim_tx": "0x8689f6e9324dc9545f0384ee146933a3e244ca2aba7dd3ec66ed95e8a3897a7c",
+      "tries": [
+        {
+          "tx": "0xead78b576ce1214313198a48bebd973a158a51ca52f10154ceaca751289172f1",
+          "sent_at": "2026-11-09T13:23:42Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XL",
+      "status": "SIZED",
+      "tier": "XL",
+      "pay": "800000000000000000",
+      "size_tx": "0xead78b576ce1214313198a48bebd973a158a51ca52f10154ceaca751289172f1"
+    },
+    {
+      "case": "8",
+      "run": 3,
+      "claim_id": 30,
+      "claim_tx": "0xf9ecd6be572723949ae2854f0fe58f4d8c14b8f36d3fc0521e4e0f1c982d05dd",
+      "tries": [
+        {
+          "tx": "0x5990aeefc3ecc333d96b0da26823b873171a4b16c6a5dc00111db4e3bf15de36",
+          "sent_at": "2026-11-09T13:24:03Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XL",
+      "status": "SIZED",
+      "tier": "XL",
+      "pay": "800000000000000000",
+      "size_tx": "0x5990aeefc3ecc333d96b0da26823b873171a4b16c6a5dc00111db4e3bf15de36"
+    },
+    {
+      "case": "9",
+      "run": 2,
+      "claim_id": 31,
+      "claim_tx": "0xc543cc0fd8ef83a8ab25bc0cf25880231c12f2839099c33e456c7e6bbae3a273",
+      "tries": [
+        {
+          "tx": "0x5a2e3d129781d085edc2dedb04b1f154d1cdfc0261bb3490d277a65ba326b57c",
+          "sent_at": "2026-11-09T13:24:29Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "NONE",
+      "status": "UNSIZED",
+      "tier": "",
+      "pay": "0",
+      "size_tx": "0x5a2e3d129781d085edc2dedb04b1f154d1cdfc0261bb3490d277a65ba326b57c"
+    },
+    {
+      "case": "9",
+      "run": 3,
+      "claim_id": 32,
+      "claim_tx": "0x9e8d14b745a41363fac1610dd9382b22f2dad1e0b1e3381e5c8daec9afa07e6e",
+      "tries": [
+        {
+          "tx": "0xb25ae95bf04b7763a8057da21e7f8725112ac0f230d3f15c47837f13b09495b3",
+          "sent_at": "2026-11-09T13:24:56Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "NONE",
+      "status": "UNSIZED",
+      "tier": "",
+      "pay": "0",
+      "size_tx": "0xb25ae95bf04b7763a8057da21e7f8725112ac0f230d3f15c47837f13b09495b3"
+    },
+    {
+      "case": "10",
+      "run": 2,
+      "claim_id": 33,
+      "claim_tx": "0xdd39e656c34e735998a4fae9632b0f0dcdc26e8f3155ef038af9c805e1e2c2d8",
+      "tries": [
+        {
+          "tx": "0x05acdd8afe5cd60e5f17b169226e58d6df15a0497cee1f562062c280379e21d9",
+          "sent_at": "2026-11-09T13:25:18Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x05acdd8afe5cd60e5f17b169226e58d6df15a0497cee1f562062c280379e21d9"
+    },
+    {
+      "case": "10",
+      "run": 3,
+      "claim_id": 34,
+      "claim_tx": "0x174017ec7ff2cd25b97828da3b3813fb962c85bde9b83f9a3699a939f66e6c80",
+      "tries": [
+        {
+          "tx": "0x61a0adaad3c22db266e204a76f28772610f9518b923db6c235b74ad26514edfc",
+          "sent_at": "2026-11-09T13:26:18Z",
+          "consensus": "decided"
+        }
+      ],
+      "label": "XS",
+      "status": "SIZED",
+      "tier": "XS",
+      "pay": "20000000000000000",
+      "size_tx": "0x61a0adaad3c22db266e204a76f28772610f9518b923db6c235b74ad26514edfc"
+    }
+  ],
+  "card": {
+    "id": 2,
+    "tx": "0x5a50a1f71cef8b560c61d860675356b8f643e8cbb4423ee53aea3a762b813ac7",
+    "opened_at": "2026-11-09T13:06:27Z",
+    "owner": "0x4Be0bE52766Abc3A0b549F18056C5B156f5fC951",
+    "prices_wei": [
+      "20000000000000000",
+      "50000000000000000",
+      "120000000000000000",
+      "300000000000000000",
+      "800000000000000000"
+    ]
+  },
+  "contract": "0x8E07F4eDd2C9F457F7148356720634a2bCeab2cF",
+  "contract_sha256": "c6498250f6088541a5e5c592cbd85eecb376550fb01fa33c4888b4af254abdd6",
+  "golden_sha256": "dc783a77d4488ae9f9b4873747204eae8f898098167cd40c1a64e4f1626db948",
+  "golden_locked_at": "2026-11-09T13:06:15Z",
+  "judge_sha256": "7488d3c2458e84c0c830de5c624477667ef7a04f219c21bbbb3c1031ea12093f",
+  "network": "studio-next",
+  "explorer": "https://explorer-studio-dev.genlayer.com",
+  "owner": "0x4Be0bE52766Abc3A0b549F18056C5B156f5fC951",
+  "claimant": "0xE863C7d6F9b10Da967bc4329bc22Fc7211978194"
+}

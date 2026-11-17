@@ -42,7 +42,7 @@ MUTANTS = [
     ("appeal: any account may appeal", 'raise gl.vm.UserError(E + "only the claimant may appeal")', "pass"),
     ("open_card: the card is owned by a fixed address", "owner=gl.message.sender_address,", "owner=ZERO,"),
     ("claim: the claim is not bound to the claimant", "claimant=gl.message.sender_address,", "claimant=ZERO,"),
-    ("withdraw: pays a fixed address", "_Payee(me).emit_transfer(value=u256(amount))", "_Payee(ZERO).emit_transfer(value=u256(amount))"),
+    ("withdraw: pays a fixed address", "gl.chain.Account(me).emit_transfer(amount)", "gl.chain.Account(ZERO).emit_transfer(amount)"),
     (
         "size: the caller is not recorded",
         "self._settle(c, k, label, now, gl.message.sender_address)",
